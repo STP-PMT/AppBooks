@@ -29,6 +29,7 @@ namespace AppBooks
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnTypes = new System.Windows.Forms.Button();
@@ -194,6 +195,7 @@ namespace AppBooks
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.panelDetail);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHome";
             this.Text = "ห้องสมุด";
             this.Load += new System.EventHandler(this.FormHome_Load);
