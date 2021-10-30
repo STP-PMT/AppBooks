@@ -144,7 +144,7 @@ namespace AppBooks
             // 
             this.labelTitleOrders.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(254)))));
-            this.labelTitleOrders.Location = new System.Drawing.Point(12, 26);
+            this.labelTitleOrders.Location = new System.Drawing.Point(12, 23);
             this.labelTitleOrders.Name = "labelTitleOrders";
             this.labelTitleOrders.Size = new System.Drawing.Size(140, 45);
             this.labelTitleOrders.TabIndex = 6;

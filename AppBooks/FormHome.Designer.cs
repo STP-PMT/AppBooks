@@ -49,6 +49,7 @@ namespace AppBooks
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.Controls.Add(this.labelName);
             this.panelMenu.Controls.Add(this.btnReport);
             this.panelMenu.Controls.Add(this.btnTypes);
             this.panelMenu.Controls.Add(this.btnBooks);
@@ -58,7 +59,7 @@ namespace AppBooks
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(246, 652);
+            this.panelMenu.Size = new System.Drawing.Size(204, 652);
             this.panelMenu.TabIndex = 0;
             // 
             // btnReport
@@ -69,7 +70,7 @@ namespace AppBooks
             this.btnReport.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.Location = new System.Drawing.Point(0, 311);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(246, 45);
+            this.btnReport.Size = new System.Drawing.Size(204, 45);
             this.btnReport.TabIndex = 5;
             this.btnReport.Text = "รายงาน";
             this.btnReport.UseVisualStyleBackColor = true;
@@ -83,7 +84,7 @@ namespace AppBooks
             this.btnTypes.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTypes.Location = new System.Drawing.Point(0, 266);
             this.btnTypes.Name = "btnTypes";
-            this.btnTypes.Size = new System.Drawing.Size(246, 45);
+            this.btnTypes.Size = new System.Drawing.Size(204, 45);
             this.btnTypes.TabIndex = 4;
             this.btnTypes.Text = "ประเภทหนังสือ";
             this.btnTypes.UseVisualStyleBackColor = true;
@@ -97,7 +98,7 @@ namespace AppBooks
             this.btnBooks.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.Location = new System.Drawing.Point(0, 221);
             this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(246, 45);
+            this.btnBooks.Size = new System.Drawing.Size(204, 45);
             this.btnBooks.TabIndex = 3;
             this.btnBooks.Text = "หนังสือ";
             this.btnBooks.UseVisualStyleBackColor = true;
@@ -111,7 +112,7 @@ namespace AppBooks
             this.btnOrders.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrders.Location = new System.Drawing.Point(0, 176);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(246, 45);
+            this.btnOrders.Size = new System.Drawing.Size(204, 45);
             this.btnOrders.TabIndex = 2;
             this.btnOrders.Text = "รายการยืม";
             this.btnOrders.UseVisualStyleBackColor = true;
@@ -125,7 +126,7 @@ namespace AppBooks
             this.btnHome.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(0, 131);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(246, 45);
+            this.btnHome.Size = new System.Drawing.Size(204, 45);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "หน้าแรก";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -138,7 +139,7 @@ namespace AppBooks
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(246, 131);
+            this.panelLogo.Size = new System.Drawing.Size(204, 131);
             this.panelLogo.TabIndex = 0;
             // 
             // label1
@@ -148,9 +149,9 @@ namespace AppBooks
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(254)))));
-            this.label1.Location = new System.Drawing.Point(92, 27);
+            this.label1.Location = new System.Drawing.Point(73, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 64);
+            this.label1.Size = new System.Drawing.Size(125, 64);
             this.label1.TabIndex = 1;
             this.label1.Text = "ห้องสมุด";
             // 
@@ -160,18 +161,18 @@ namespace AppBooks
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::AppBooks.Properties.Resources._50x50;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 61);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panelDetail
             // 
             this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDetail.Location = new System.Drawing.Point(246, 0);
+            this.panelDetail.Location = new System.Drawing.Point(204, 0);
             this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(904, 652);
+            this.panelDetail.Size = new System.Drawing.Size(946, 652);
             this.panelDetail.TabIndex = 1;
             // 
             // labelName
@@ -181,7 +182,7 @@ namespace AppBooks
             this.labelName.AutoSize = true;
             this.labelName.BackColor = System.Drawing.Color.White;
             this.labelName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(60, 624);
+            this.labelName.Location = new System.Drawing.Point(40, 624);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(119, 19);
             this.labelName.TabIndex = 0;
@@ -192,7 +193,6 @@ namespace AppBooks
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 652);
-            this.Controls.Add(this.labelName);
             this.Controls.Add(this.panelDetail);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -200,10 +200,10 @@ namespace AppBooks
             this.Text = "ห้องสมุด";
             this.Load += new System.EventHandler(this.FormHome_Load);
             this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
