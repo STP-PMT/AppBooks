@@ -69,6 +69,7 @@ namespace AppBooks
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "หน้าแรก";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelLogo
             // 
@@ -125,6 +126,7 @@ namespace AppBooks
             this.btnOrders.TabIndex = 2;
             this.btnOrders.Text = "รายการยืม";
             this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // btnBooks
             // 
@@ -138,6 +140,7 @@ namespace AppBooks
             this.btnBooks.TabIndex = 3;
             this.btnBooks.Text = "หนังสือ";
             this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnTypes
             // 
@@ -151,6 +154,7 @@ namespace AppBooks
             this.btnTypes.TabIndex = 4;
             this.btnTypes.Text = "ประเภทหนังสือ";
             this.btnTypes.UseVisualStyleBackColor = true;
+            this.btnTypes.Click += new System.EventHandler(this.btnTypes_Click);
             // 
             // FormHome
             // 
