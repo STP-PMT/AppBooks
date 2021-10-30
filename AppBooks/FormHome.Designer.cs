@@ -184,6 +184,7 @@ namespace AppBooks
             this.btnReport.TabIndex = 5;
             this.btnReport.Text = "รายงาน";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // FormHome
             // 
