@@ -16,5 +16,10 @@ namespace AppBooks
         {
             InitializeComponent();
         }
+
+        private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            Console.WriteLine("Date : " + monthCalendar.SelectionRange.Start.ToString());
+        }
     }
 }
