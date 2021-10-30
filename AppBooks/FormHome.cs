@@ -78,5 +78,12 @@ namespace AppBooks
             btnReport.BackColor = c;
             openChildForm(new FormReport());
         }
+
+        private void FormHome_Load(object sender, EventArgs e)
+        {
+            setColorButton();
+            btnHome.BackColor = c;
+            openChildForm(new FormPageHome());
+        }
     }
 }
