@@ -34,10 +34,10 @@ namespace AppBooks
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnTypes = new System.Windows.Forms.Button();
+            this.panelDetail = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,14 +106,6 @@ namespace AppBooks
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(246, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(904, 652);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
             // btnOrders
             // 
             this.btnOrders.Dock = System.Windows.Forms.DockStyle.Top;
@@ -156,12 +148,20 @@ namespace AppBooks
             this.btnTypes.UseVisualStyleBackColor = true;
             this.btnTypes.Click += new System.EventHandler(this.btnTypes_Click);
             // 
+            // panelDetail
+            // 
+            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDetail.Location = new System.Drawing.Point(246, 0);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(904, 652);
+            this.panelDetail.TabIndex = 1;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 652);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panelDetail);
             this.Controls.Add(this.panelMenu);
             this.Name = "FormHome";
             this.Text = "ห้องสมุด";
@@ -177,12 +177,12 @@ namespace AppBooks
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnTypes;
         private System.Windows.Forms.Button btnBooks;
         private System.Windows.Forms.Button btnOrders;
+        private System.Windows.Forms.Panel panelDetail;
     }
 }
 

@@ -26,28 +26,49 @@ namespace AppBooks
             btnTypes.BackColor = Color.White;
         }
 
+        private Form temp = null;
+        private void openChildForm(Form form)
+        {
+            if(temp !=null)
+            {
+                temp.Close();
+            }
+            temp = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelDetail.Controls.Add(form);
+            panelDetail.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             setColorButton();
             btnHome.BackColor = c;
+            openChildForm(new FormHome());
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
             setColorButton();
             btnOrders.BackColor = c;
+            openChildForm(new FormOrders());
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
             setColorButton();
             btnBooks.BackColor = c;
+            openChildForm(new FormBooks());
         }
 
         private void btnTypes_Click(object sender, EventArgs e)
         {
             setColorButton();
             btnTypes.BackColor = c;
+            openChildForm(new FormTypes());
         }
     }
 }
