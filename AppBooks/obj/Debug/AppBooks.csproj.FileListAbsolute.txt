@@ -1,0 +1,10 @@
+D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\AppBooks.exe.config
+D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\AppBooks.exe
+D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\AppBooks.pdb
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.csproj.AssemblyReference.cache
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.Form1.resources
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.Properties.Resources.resources
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.csproj.GenerateResource.cache
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.csproj.CoreCompileInputs.cache
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.exe
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.pdb
