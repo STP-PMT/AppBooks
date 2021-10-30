@@ -64,6 +64,12 @@
     <Compile Include="FormOrders.Designer.cs">
       <DependentUpon>FormOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPageHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPageHome.Designer.cs">
+      <DependentUpon>FormPageHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTypes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -47,7 +47,7 @@ namespace AppBooks
         {
             setColorButton();
             btnHome.BackColor = c;
-            openChildForm(new FormHome());
+            openChildForm(new FormPageHome());
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
