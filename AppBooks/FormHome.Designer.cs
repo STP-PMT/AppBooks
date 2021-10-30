@@ -30,14 +30,15 @@ namespace AppBooks
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnTypes = new System.Windows.Forms.Button();
+            this.btnBooks = new System.Windows.Forms.Button();
+            this.btnOrders = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnOrders = new System.Windows.Forms.Button();
-            this.btnBooks = new System.Windows.Forms.Button();
-            this.btnTypes = new System.Windows.Forms.Button();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.labelName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +57,48 @@ namespace AppBooks
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(246, 652);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnTypes
+            // 
+            this.btnTypes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTypes.FlatAppearance.BorderSize = 0;
+            this.btnTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTypes.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTypes.Location = new System.Drawing.Point(0, 266);
+            this.btnTypes.Name = "btnTypes";
+            this.btnTypes.Size = new System.Drawing.Size(246, 45);
+            this.btnTypes.TabIndex = 4;
+            this.btnTypes.Text = "ประเภทหนังสือ";
+            this.btnTypes.UseVisualStyleBackColor = true;
+            this.btnTypes.Click += new System.EventHandler(this.btnTypes_Click);
+            // 
+            // btnBooks
+            // 
+            this.btnBooks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBooks.FlatAppearance.BorderSize = 0;
+            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBooks.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooks.Location = new System.Drawing.Point(0, 221);
+            this.btnBooks.Name = "btnBooks";
+            this.btnBooks.Size = new System.Drawing.Size(246, 45);
+            this.btnBooks.TabIndex = 3;
+            this.btnBooks.Text = "หนังสือ";
+            this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrders.FlatAppearance.BorderSize = 0;
+            this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrders.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrders.Location = new System.Drawing.Point(0, 176);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(246, 45);
+            this.btnOrders.TabIndex = 2;
+            this.btnOrders.Text = "รายการยืม";
+            this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // btnHome
             // 
@@ -94,6 +137,25 @@ namespace AppBooks
             this.label1.TabIndex = 1;
             this.label1.Text = "ห้องสมุด";
             // 
+            // panelDetail
+            // 
+            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDetail.Location = new System.Drawing.Point(246, 0);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(904, 652);
+            this.panelDetail.TabIndex = 1;
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.White;
+            this.labelName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(60, 624);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(119, 19);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "สืทธิพงษ์ แปลมูลตรี";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -106,61 +168,12 @@ namespace AppBooks
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnOrders
-            // 
-            this.btnOrders.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrders.FlatAppearance.BorderSize = 0;
-            this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrders.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrders.Location = new System.Drawing.Point(0, 176);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(246, 45);
-            this.btnOrders.TabIndex = 2;
-            this.btnOrders.Text = "รายการยืม";
-            this.btnOrders.UseVisualStyleBackColor = true;
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
-            // 
-            // btnBooks
-            // 
-            this.btnBooks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBooks.FlatAppearance.BorderSize = 0;
-            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBooks.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBooks.Location = new System.Drawing.Point(0, 221);
-            this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(246, 45);
-            this.btnBooks.TabIndex = 3;
-            this.btnBooks.Text = "หนังสือ";
-            this.btnBooks.UseVisualStyleBackColor = true;
-            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
-            // 
-            // btnTypes
-            // 
-            this.btnTypes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTypes.FlatAppearance.BorderSize = 0;
-            this.btnTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTypes.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTypes.Location = new System.Drawing.Point(0, 266);
-            this.btnTypes.Name = "btnTypes";
-            this.btnTypes.Size = new System.Drawing.Size(246, 45);
-            this.btnTypes.TabIndex = 4;
-            this.btnTypes.Text = "ประเภทหนังสือ";
-            this.btnTypes.UseVisualStyleBackColor = true;
-            this.btnTypes.Click += new System.EventHandler(this.btnTypes_Click);
-            // 
-            // panelDetail
-            // 
-            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDetail.Location = new System.Drawing.Point(246, 0);
-            this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(904, 652);
-            this.panelDetail.TabIndex = 1;
-            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 652);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.panelDetail);
             this.Controls.Add(this.panelMenu);
             this.Name = "FormHome";
@@ -169,6 +182,7 @@ namespace AppBooks
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -183,6 +197,7 @@ namespace AppBooks
         private System.Windows.Forms.Button btnBooks;
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Panel panelDetail;
+        private System.Windows.Forms.Label labelName;
     }
 }
 
