@@ -39,9 +39,15 @@ namespace AppBooks
             this.btnSearch = new System.Windows.Forms.Button();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
             this.labelTitleOrders = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelDetailBook = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabAll.SuspendLayout();
+            this.panelDetailOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOrders
@@ -112,9 +118,10 @@ namespace AppBooks
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(511, 144);
+            this.btnSearch.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(511, 142);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(54, 20);
+            this.btnSearch.Size = new System.Drawing.Size(54, 25);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "ค้นหา";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -123,6 +130,11 @@ namespace AppBooks
             // 
             this.panelDetailOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDetailOrder.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelDetailOrder.Controls.Add(this.lbName);
+            this.panelDetailOrder.Controls.Add(this.labelDetailBook);
+            this.panelDetailOrder.Controls.Add(this.labelName);
+            this.panelDetailOrder.Controls.Add(this.pictureBox1);
             this.panelDetailOrder.Location = new System.Drawing.Point(584, 192);
             this.panelDetailOrder.Name = "panelDetailOrder";
             this.panelDetailOrder.Size = new System.Drawing.Size(227, 300);
@@ -137,6 +149,43 @@ namespace AppBooks
             this.labelTitleOrders.Size = new System.Drawing.Size(140, 45);
             this.labelTitleOrders.TabIndex = 6;
             this.labelTitleOrders.Text = "รายการยืม";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 95);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(13, 123);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(73, 19);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "ชื่อหนังสือ :";
+            // 
+            // labelDetailBook
+            // 
+            this.labelDetailBook.AutoSize = true;
+            this.labelDetailBook.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDetailBook.Location = new System.Drawing.Point(8, 142);
+            this.labelDetailBook.Name = "labelDetailBook";
+            this.labelDetailBook.Size = new System.Drawing.Size(78, 19);
+            this.labelDetailBook.TabIndex = 2;
+            this.labelDetailBook.Text = "รายละเอียด :";
+            // 
+            // lbName
+            // 
+            this.lbName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(92, 123);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(120, 19);
+            this.lbName.TabIndex = 3;
             // 
             // FormOrders
             // 
@@ -155,6 +204,9 @@ namespace AppBooks
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabAll.ResumeLayout(false);
+            this.panelDetailOrder.ResumeLayout(false);
+            this.panelDetailOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +223,9 @@ namespace AppBooks
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panelDetailOrder;
         private System.Windows.Forms.Label labelTitleOrders;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelDetailBook;
+        private System.Windows.Forms.Label lbName;
     }
 }
