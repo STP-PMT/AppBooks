@@ -52,34 +52,34 @@
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBooks.cs">
+    <Compile Include="Page\FormBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBooks.Designer.cs">
+    <Compile Include="Page\FormBooks.Designer.cs">
       <DependentUpon>FormBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOrders.cs">
+    <Compile Include="Page\FormOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOrders.Designer.cs">
+    <Compile Include="Page\FormOrders.Designer.cs">
       <DependentUpon>FormOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPageHome.cs">
+    <Compile Include="Page\FormPageHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPageHome.Designer.cs">
+    <Compile Include="Page\FormPageHome.Designer.cs">
       <DependentUpon>FormPageHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReport.cs">
+    <Compile Include="Page\FormReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReport.Designer.cs">
+    <Compile Include="Page\FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTypes.cs">
+    <Compile Include="Page\FormTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTypes.Designer.cs">
+    <Compile Include="Page\FormTypes.Designer.cs">
       <DependentUpon>FormTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -87,7 +87,7 @@
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOrders.resx">
+    <EmbeddedResource Include="Page\FormOrders.resx">
       <DependentUpon>FormOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -116,8 +116,6 @@
   <ItemGroup>
     <None Include="assets\image\50x50.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Page\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
