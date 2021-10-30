@@ -39,6 +39,7 @@ namespace AppBooks
             this.panelDetail = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnReport = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,6 +48,7 @@ namespace AppBooks
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.Controls.Add(this.btnReport);
             this.panelMenu.Controls.Add(this.btnTypes);
             this.panelMenu.Controls.Add(this.btnBooks);
             this.panelMenu.Controls.Add(this.btnOrders);
@@ -170,6 +172,19 @@ namespace AppBooks
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnReport
+            // 
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(0, 311);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(246, 45);
+            this.btnReport.TabIndex = 5;
+            this.btnReport.Text = "รายงาน";
+            this.btnReport.UseVisualStyleBackColor = true;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +215,7 @@ namespace AppBooks
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Panel panelDetail;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Button btnReport;
     }
 }
 

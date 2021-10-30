@@ -110,5 +110,8 @@
   <ItemGroup>
     <None Include="assets\image\50x50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Page\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
