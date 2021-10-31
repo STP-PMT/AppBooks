@@ -89,7 +89,7 @@ namespace AppBooks
             // 
             this.lbDetail.BackColor = System.Drawing.Color.Gainsboro;
             this.lbDetail.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDetail.Location = new System.Drawing.Point(92, 152);
+            this.lbDetail.Location = new System.Drawing.Point(92, 267);
             this.lbDetail.Name = "lbDetail";
             this.lbDetail.Size = new System.Drawing.Size(120, 52);
             this.lbDetail.TabIndex = 4;
@@ -98,7 +98,7 @@ namespace AppBooks
             // 
             this.lbName.BackColor = System.Drawing.Color.Gainsboro;
             this.lbName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(92, 123);
+            this.lbName.Location = new System.Drawing.Point(92, 238);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(120, 19);
             this.lbName.TabIndex = 3;
@@ -107,7 +107,7 @@ namespace AppBooks
             // 
             this.labelDetailBook.AutoSize = true;
             this.labelDetailBook.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDetailBook.Location = new System.Drawing.Point(8, 152);
+            this.labelDetailBook.Location = new System.Drawing.Point(8, 267);
             this.labelDetailBook.Name = "labelDetailBook";
             this.labelDetailBook.Size = new System.Drawing.Size(78, 19);
             this.labelDetailBook.TabIndex = 2;
@@ -117,7 +117,7 @@ namespace AppBooks
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(13, 123);
+            this.labelName.Location = new System.Drawing.Point(13, 238);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(73, 19);
             this.labelName.TabIndex = 1;
@@ -128,7 +128,7 @@ namespace AppBooks
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -187,6 +187,7 @@ namespace AppBooks
             this.dgvBooks.AllowUserToAddRows = false;
             this.dgvBooks.AllowUserToDeleteRows = false;
             this.dgvBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBooks.BackgroundColor = System.Drawing.Color.White;
             this.dgvBooks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooks.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -194,6 +195,7 @@ namespace AppBooks
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.ReadOnly = true;
             this.dgvBooks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvBooks.RowHeadersVisible = false;
             this.dgvBooks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBooks.Size = new System.Drawing.Size(661, 454);
@@ -226,7 +228,7 @@ namespace AppBooks
             // 
             this.labelType.AutoSize = true;
             this.labelType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelType.Location = new System.Drawing.Point(29, 219);
+            this.labelType.Location = new System.Drawing.Point(29, 334);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(57, 19);
             this.labelType.TabIndex = 5;
@@ -236,7 +238,7 @@ namespace AppBooks
             // 
             this.lbType.BackColor = System.Drawing.Color.Gainsboro;
             this.lbType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbType.Location = new System.Drawing.Point(92, 219);
+            this.lbType.Location = new System.Drawing.Point(92, 334);
             this.lbType.Name = "lbType";
             this.lbType.Size = new System.Drawing.Size(120, 19);
             this.lbType.TabIndex = 6;
