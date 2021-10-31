@@ -22,8 +22,7 @@ namespace AppBooks
         {
             btnHome.BackColor = Color.White;
             btnBooks.BackColor = Color.White;
-            btnOrders.BackColor = Color.White;
-            btnTypes.BackColor = Color.White;
+            btnOrders.BackColor = Color.White;           
             btnReport.BackColor = Color.White;
         }
 
@@ -63,13 +62,6 @@ namespace AppBooks
             setColorButton();
             btnBooks.BackColor = c;
             openChildForm(new FormBooks());
-        }
-
-        private void btnTypes_Click(object sender, EventArgs e)
-        {
-            setColorButton();
-            btnTypes.BackColor = c;
-            openChildForm(new FormTypes());
         }
 
         private void btnReport_Click(object sender, EventArgs e)
