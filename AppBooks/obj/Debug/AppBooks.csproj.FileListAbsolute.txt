@@ -9,3 +9,5 @@ D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.exe
 D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.pdb
 D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.FormHome.resources
 D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.FormOrders.resources
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.Page.dialog.FormManageOrders.resources
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.FormBooks.resources
