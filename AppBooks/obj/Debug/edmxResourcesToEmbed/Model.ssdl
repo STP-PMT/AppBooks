@@ -16,8 +16,8 @@
     </Key>
     <Property Name="bid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="type" Type="int" Nullable="false" />
-    <Property Name="name" Type="nchar" MaxLength="50" />
-    <Property Name="detail" Type="nchar" MaxLength="10" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="detail" Type="varchar" MaxLength="50" />
     <Property Name="status" Type="int" />
     <Property Name="image" Type="image" />
   </EntityType>

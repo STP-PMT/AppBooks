@@ -74,6 +74,7 @@ namespace AppBooks
             this.btnEdit.TabIndex = 16;
             this.btnEdit.Text = "แก้ไข";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // labelTitleOrders
             // 

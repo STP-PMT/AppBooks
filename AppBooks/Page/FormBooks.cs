@@ -15,6 +15,7 @@ namespace AppBooks
     public partial class FormBooks : Form
     {
         dbBookEntities context = new dbBookEntities();
+        int bid = -1;
         public FormBooks()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace AppBooks
             {
                 dgvBooks.CurrentRow.Selected = true;
                 int id = int.Parse( dgvBooks.Rows[e.RowIndex].Cells["รหัสหนังสือ"].FormattedValue.ToString());
+                bid = id;
                 var result = (
                 from b in context.Books
                 join t in context.Types
@@ -81,6 +83,15 @@ namespace AppBooks
         {
             FormManageBooks form = new FormManageBooks();           
             form.ShowDialog();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (bid != -1) {
+                FormManageBooks form = new FormManageBooks(bid);
+                form.ShowDialog();
+            }
+            bid = -1;
         }
     }
 }
