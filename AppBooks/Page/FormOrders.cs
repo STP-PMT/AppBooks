@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBooks.Page.dialog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,16 @@ namespace AppBooks
                      วันที่ต้องคืน = o.edate
                  }) ;
             dgvOrdersAll.DataSource = result.ToList();
+        }
+
+        private void btnBorrow_Click(object sender, EventArgs e)
+        {
+            FormManageOrders form = new FormManageOrders();
+            form.ShowDialog();
+            if (form.status == 1)
+            {
+                FormOrders_Load(sender, e);
+            }
         }
     }
 }

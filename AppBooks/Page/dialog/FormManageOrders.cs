@@ -12,9 +12,20 @@ namespace AppBooks.Page.dialog
 {
     public partial class FormManageOrders : Form
     {
+        public int status { get; set; }
         public FormManageOrders()
         {
             InitializeComponent();
+        }
+
+        private void FormManageOrders_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormManageOrders_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            status = 1;
         }
     }
 }
