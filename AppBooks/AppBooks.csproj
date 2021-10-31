@@ -85,6 +85,12 @@
     <Compile Include="Order.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Page\dialog\FormDeleteBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\dialog\FormDelete.Designer.cs">
+      <DependentUpon>FormDeleteBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Page\dialog\FormManageBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\dialog\FormDelete.resx">
+      <DependentUpon>FormDeleteBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page\dialog\FormManageBooks.resx">
       <DependentUpon>FormManageBooks.cs</DependentUpon>

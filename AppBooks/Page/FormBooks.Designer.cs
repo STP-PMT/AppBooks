@@ -37,20 +37,20 @@ namespace AppBooks
             this.labelDetailBook = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
+            this.lbType = new System.Windows.Forms.Label();
+            this.labelType = new System.Windows.Forms.Label();
+            this.pictureBoxBook = new System.Windows.Forms.PictureBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.tabAll = new System.Windows.Forms.TabPage();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.labelType = new System.Windows.Forms.Label();
-            this.lbType = new System.Windows.Forms.Label();
-            this.pictureBoxBook = new System.Windows.Forms.PictureBox();
             this.panelDetailOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).BeginInit();
             this.tabAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -64,6 +64,7 @@ namespace AppBooks
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "ลบ";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -141,6 +142,35 @@ namespace AppBooks
             this.panelDetailOrder.Size = new System.Drawing.Size(227, 454);
             this.panelDetailOrder.TabIndex = 14;
             // 
+            // lbType
+            // 
+            this.lbType.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbType.Location = new System.Drawing.Point(92, 334);
+            this.lbType.Name = "lbType";
+            this.lbType.Size = new System.Drawing.Size(120, 19);
+            this.lbType.TabIndex = 6;
+            // 
+            // labelType
+            // 
+            this.labelType.AutoSize = true;
+            this.labelType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.Location = new System.Drawing.Point(29, 334);
+            this.labelType.Name = "labelType";
+            this.labelType.Size = new System.Drawing.Size(57, 19);
+            this.labelType.TabIndex = 5;
+            this.labelType.Text = "ประเภท :";
+            // 
+            // pictureBoxBook
+            // 
+            this.pictureBoxBook.BackColor = System.Drawing.Color.White;
+            this.pictureBoxBook.Location = new System.Drawing.Point(12, 13);
+            this.pictureBoxBook.Name = "pictureBoxBook";
+            this.pictureBoxBook.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBook.TabIndex = 0;
+            this.pictureBoxBook.TabStop = false;
+            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -216,35 +246,6 @@ namespace AppBooks
             this.tabControl1.Size = new System.Drawing.Size(675, 486);
             this.tabControl1.TabIndex = 11;
             // 
-            // labelType
-            // 
-            this.labelType.AutoSize = true;
-            this.labelType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelType.Location = new System.Drawing.Point(29, 334);
-            this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(57, 19);
-            this.labelType.TabIndex = 5;
-            this.labelType.Text = "ประเภท :";
-            // 
-            // lbType
-            // 
-            this.lbType.BackColor = System.Drawing.Color.Gainsboro;
-            this.lbType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbType.Location = new System.Drawing.Point(92, 334);
-            this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(120, 19);
-            this.lbType.TabIndex = 6;
-            // 
-            // pictureBoxBook
-            // 
-            this.pictureBoxBook.BackColor = System.Drawing.Color.White;
-            this.pictureBoxBook.Location = new System.Drawing.Point(12, 13);
-            this.pictureBoxBook.Name = "pictureBoxBook";
-            this.pictureBoxBook.Size = new System.Drawing.Size(200, 200);
-            this.pictureBoxBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBook.TabIndex = 0;
-            this.pictureBoxBook.TabStop = false;
-            // 
             // FormBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,10 +264,10 @@ namespace AppBooks
             this.Load += new System.EventHandler(this.FormBooks_Load);
             this.panelDetailOrder.ResumeLayout(false);
             this.panelDetailOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).EndInit();
             this.tabAll.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

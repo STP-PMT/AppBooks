@@ -99,5 +99,20 @@ namespace AppBooks
             }
             bid = -1;
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (bid != -1)
+            {
+                FormDeleteBooks form = new FormDeleteBooks(bid);
+                form.ShowDialog();
+                if (form.status == 1)
+                {
+                    FormBooks_Load(sender, e);
+                }
+
+            }
+            bid = -1;
+        }
     }
 }
