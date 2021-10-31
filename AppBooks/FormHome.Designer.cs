@@ -38,8 +38,8 @@ namespace AppBooks
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelDetail = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelDetail = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +71,7 @@ namespace AppBooks
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(119, 19);
             this.labelName.TabIndex = 0;
-            this.labelName.Text = "สืทธิพงษ์ แปลมูลตรี";
+            this.labelName.Text = "สิทธิพงษ์ แปลมูลตรี";
             // 
             // btnReport
             // 
@@ -152,14 +152,6 @@ namespace AppBooks
             this.label1.TabIndex = 1;
             this.label1.Text = "ห้องสมุด";
             // 
-            // panelDetail
-            // 
-            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDetail.Location = new System.Drawing.Point(204, 0);
-            this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(946, 727);
-            this.panelDetail.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -171,6 +163,14 @@ namespace AppBooks
             this.pictureBox1.Size = new System.Drawing.Size(55, 61);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelDetail
+            // 
+            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDetail.Location = new System.Drawing.Point(204, 0);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(946, 727);
+            this.panelDetail.TabIndex = 1;
             // 
             // FormHome
             // 

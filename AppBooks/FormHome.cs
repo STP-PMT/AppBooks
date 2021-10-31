@@ -13,6 +13,8 @@ namespace AppBooks
     public partial class FormHome : Form
     {
         private Color c = Color.FromArgb(100, 70, 185, 255);
+        private Form temp = null;
+
         public FormHome()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace AppBooks
             btnReport.BackColor = Color.White;
         }
 
-        private Form temp = null;
+        
         private void openChildForm(Form form)
         {
             if(temp !=null)
