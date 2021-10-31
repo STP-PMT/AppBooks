@@ -20,6 +20,7 @@ namespace AppBooks
 
         private void FormBooks_Load(object sender, EventArgs e)
         {
+            dgvBooks.Font = new Font("TH-Sarabun", 10, FontStyle.Regular);
             var result = (
                  from b in context.Books
                  join t in context.Types
@@ -33,6 +34,16 @@ namespace AppBooks
                  });
 
             dgvBooks.DataSource = result.ToList();
+        }
+
+        private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1 && dgvBooks.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dgvBooks.CurrentRow.Selected = true;
+                Console.WriteLine(dgvBooks.Rows[e.RowIndex].Cells["รหัสหนังสือ"].FormattedValue.ToString());
+
+            }
         }
     }
 }
