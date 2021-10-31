@@ -12,9 +12,27 @@ namespace AppBooks
 {
     public partial class FormBooks : Form
     {
+        dbBookEntities context = new dbBookEntities();
         public FormBooks()
         {
             InitializeComponent();
+        }
+
+        private void FormBooks_Load(object sender, EventArgs e)
+        {
+            var result = (
+                 from b in context.Books
+                 join t in context.Types
+                 on b.type equals t.tid
+                 select new
+                 {
+                     รหัสหนังสือ = b.bid,
+                     ชื่อหนังสือ = b.name,
+                     รายละเอียด = b.detail,
+                     ประเภท = t.name                     
+                 });
+
+            dgvBooks.DataSource = result.ToList();
         }
     }
 }

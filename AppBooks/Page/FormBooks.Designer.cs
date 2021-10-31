@@ -45,13 +45,13 @@ namespace AppBooks
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.tabAll = new System.Windows.Forms.TabPage();
-            this.dgvOrdersAll = new System.Windows.Forms.DataGridView();
+            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDetailOrder.SuspendLayout();
             this.tabAll.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,6 +169,7 @@ namespace AppBooks
             this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -213,7 +214,7 @@ namespace AppBooks
             // 
             // tabAll
             // 
-            this.tabAll.Controls.Add(this.dgvOrdersAll);
+            this.tabAll.Controls.Add(this.dgvBooks);
             this.tabAll.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAll.Location = new System.Drawing.Point(4, 22);
             this.tabAll.Name = "tabAll";
@@ -223,17 +224,22 @@ namespace AppBooks
             this.tabAll.Text = "ทั้งหมด";
             this.tabAll.UseVisualStyleBackColor = true;
             // 
-            // dgvOrdersAll
+            // dgvBooks
             // 
-            this.dgvOrdersAll.AllowUserToAddRows = false;
-            this.dgvOrdersAll.AllowUserToDeleteRows = false;
-            this.dgvOrdersAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrdersAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvOrdersAll.Location = new System.Drawing.Point(3, 3);
-            this.dgvOrdersAll.Name = "dgvOrdersAll";
-            this.dgvOrdersAll.ReadOnly = true;
-            this.dgvOrdersAll.Size = new System.Drawing.Size(661, 454);
-            this.dgvOrdersAll.TabIndex = 0;
+            this.dgvBooks.AllowUserToAddRows = false;
+            this.dgvBooks.AllowUserToDeleteRows = false;
+            this.dgvBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBooks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBooks.Location = new System.Drawing.Point(3, 3);
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.ReadOnly = true;
+            this.dgvBooks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvBooks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBooks.Size = new System.Drawing.Size(661, 454);
+            this.dgvBooks.TabIndex = 0;
             // 
             // btnAddBook
             // 
@@ -272,11 +278,12 @@ namespace AppBooks
             this.Controls.Add(this.tabControl1);
             this.Name = "FormBooks";
             this.Text = "FormBooks";
+            this.Load += new System.EventHandler(this.FormBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDetailOrder.ResumeLayout(false);
             this.panelDetailOrder.PerformLayout();
             this.tabAll.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,7 +308,7 @@ namespace AppBooks
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.TabPage tabAll;
-        private System.Windows.Forms.DataGridView dgvOrdersAll;
+        private System.Windows.Forms.DataGridView dgvBooks;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.TabControl tabControl1;
     }
