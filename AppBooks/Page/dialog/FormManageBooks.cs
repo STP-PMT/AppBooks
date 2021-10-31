@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppBooks.Page.dialog
 {
-    public partial class FormManageBooks : Form
+    public partial class จัดการข้อมูลหนังสือ : Form
     {
-        public FormManageBooks()
+        public จัดการข้อมูลหนังสือ()
         {
             InitializeComponent();
         }

@@ -15,3 +15,4 @@ D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\EntityFramework.dll
 D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\EntityFramework.SqlServer.dll
 D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\EntityFramework.xml
 D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.Page.dialog.FormManageBooks.resources

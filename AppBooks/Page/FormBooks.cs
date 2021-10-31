@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBooks.Page.dialog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,10 +71,15 @@ namespace AppBooks
                     if (i.image != null) 
                     {
                         pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(i.image);
-                    }
-                    
+                    }                    
                 }
             }
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            FormManageBooks form = new FormManageBooks();           
+            form.ShowDialog();
         }
     }
 }
