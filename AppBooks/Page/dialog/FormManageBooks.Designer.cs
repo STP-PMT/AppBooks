@@ -1,6 +1,6 @@
 ﻿namespace AppBooks.Page.dialog
 {
-    partial class จัดการข้อมูลหนังสือ
+    partial class FormManageBooks
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(จัดการข้อมูลหนังสือ));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManageBooks));
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelBody = new System.Windows.Forms.Panel();
             this.labelType = new System.Windows.Forms.Label();
@@ -134,6 +134,7 @@
             this.pictureBoxBook.Location = new System.Drawing.Point(323, 49);
             this.pictureBoxBook.Name = "pictureBoxBook";
             this.pictureBoxBook.Size = new System.Drawing.Size(116, 116);
+            this.pictureBoxBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBook.TabIndex = 12;
             this.pictureBoxBook.TabStop = false;
             // 
@@ -149,6 +150,7 @@
             this.btnFile.TabIndex = 13;
             this.btnFile.Text = "เปิดไฟล์";
             this.btnFile.UseVisualStyleBackColor = true;
+            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
             // 
             // btnOk
             // 
@@ -176,8 +178,9 @@
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "ยกเลิก";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // จัดการข้อมูลหนังสือ
+            // FormManageBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,8 +190,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "จัดการข้อมูลหนังสือ";
-            this.Text = "FormManageBooks";
+            this.Name = "FormManageBooks";
+            this.Text = "จัดการข้อมูลหนังสือ";
             this.panelTitle.ResumeLayout(false);
             this.panelBody.ResumeLayout(false);
             this.panelBody.PerformLayout();
