@@ -41,8 +41,24 @@ namespace AppBooks
             if (e.RowIndex > -1 && e.ColumnIndex > -1 && dgvBooks.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dgvBooks.CurrentRow.Selected = true;
-                Console.WriteLine(dgvBooks.Rows[e.RowIndex].Cells["รหัสหนังสือ"].FormattedValue.ToString());
-
+                int id = int.Parse( dgvBooks.Rows[e.RowIndex].Cells["รหัสหนังสือ"].FormattedValue.ToString());
+                var result = (
+                from b in context.Books
+                join t in context.Types
+                on b.type equals t.tid
+                where b.bid == id
+                select new
+                {
+                   b.name,
+                     b.detail,
+                    type = t.name
+                });
+                foreach(var i in result)
+                {
+                    lbName.Text = i.name;
+                    lbDetail.Text = i.detail;
+                    lbType.Text = i.type;
+                }
             }
         }
     }

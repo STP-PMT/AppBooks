@@ -29,13 +29,9 @@ namespace AppBooks
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbEdate = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.labelTitleOrders = new System.Windows.Forms.Label();
-            this.lbSdate = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelSdate = new System.Windows.Forms.Label();
             this.lbDetail = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.labelDetailBook = new System.Windows.Forms.Label();
@@ -48,22 +44,14 @@ namespace AppBooks
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labelType = new System.Windows.Forms.Label();
+            this.lbType = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDetailOrder.SuspendLayout();
             this.tabAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbEdate
-            // 
-            this.lbEdate.BackColor = System.Drawing.Color.White;
-            this.lbEdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEdate.Location = new System.Drawing.Point(92, 283);
-            this.lbEdate.Name = "lbEdate";
-            this.lbEdate.Size = new System.Drawing.Size(120, 19);
-            this.lbEdate.TabIndex = 8;
             // 
             // btnDelete
             // 
@@ -97,49 +85,20 @@ namespace AppBooks
             this.labelTitleOrders.TabIndex = 15;
             this.labelTitleOrders.Text = "หนังสือ";
             // 
-            // lbSdate
-            // 
-            this.lbSdate.BackColor = System.Drawing.Color.White;
-            this.lbSdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSdate.Location = new System.Drawing.Point(92, 255);
-            this.lbSdate.Name = "lbSdate";
-            this.lbSdate.Size = new System.Drawing.Size(120, 19);
-            this.lbSdate.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 283);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "กำหนดยืน :";
-            // 
-            // labelSdate
-            // 
-            this.labelSdate.AutoSize = true;
-            this.labelSdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSdate.Location = new System.Drawing.Point(30, 255);
-            this.labelSdate.Name = "labelSdate";
-            this.labelSdate.Size = new System.Drawing.Size(56, 19);
-            this.labelSdate.TabIndex = 5;
-            this.labelSdate.Text = "วันที่ยืม :";
-            // 
             // lbDetail
             // 
-            this.lbDetail.BackColor = System.Drawing.Color.White;
+            this.lbDetail.BackColor = System.Drawing.Color.Gainsboro;
             this.lbDetail.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDetail.Location = new System.Drawing.Point(92, 188);
+            this.lbDetail.Location = new System.Drawing.Point(92, 152);
             this.lbDetail.Name = "lbDetail";
             this.lbDetail.Size = new System.Drawing.Size(120, 52);
             this.lbDetail.TabIndex = 4;
             // 
             // lbName
             // 
-            this.lbName.BackColor = System.Drawing.Color.White;
+            this.lbName.BackColor = System.Drawing.Color.Gainsboro;
             this.lbName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(92, 159);
+            this.lbName.Location = new System.Drawing.Point(92, 123);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(120, 19);
             this.lbName.TabIndex = 3;
@@ -148,7 +107,7 @@ namespace AppBooks
             // 
             this.labelDetailBook.AutoSize = true;
             this.labelDetailBook.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDetailBook.Location = new System.Drawing.Point(8, 188);
+            this.labelDetailBook.Location = new System.Drawing.Point(8, 152);
             this.labelDetailBook.Name = "labelDetailBook";
             this.labelDetailBook.Size = new System.Drawing.Size(78, 19);
             this.labelDetailBook.TabIndex = 2;
@@ -158,7 +117,7 @@ namespace AppBooks
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(13, 159);
+            this.labelName.Location = new System.Drawing.Point(13, 123);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(73, 19);
             this.labelName.TabIndex = 1;
@@ -179,11 +138,8 @@ namespace AppBooks
             this.panelDetailOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDetailOrder.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelDetailOrder.Controls.Add(this.button1);
-            this.panelDetailOrder.Controls.Add(this.lbEdate);
-            this.panelDetailOrder.Controls.Add(this.lbSdate);
-            this.panelDetailOrder.Controls.Add(this.label2);
-            this.panelDetailOrder.Controls.Add(this.labelSdate);
+            this.panelDetailOrder.Controls.Add(this.lbType);
+            this.panelDetailOrder.Controls.Add(this.labelType);
             this.panelDetailOrder.Controls.Add(this.lbDetail);
             this.panelDetailOrder.Controls.Add(this.lbName);
             this.panelDetailOrder.Controls.Add(this.labelDetailBook);
@@ -266,14 +222,24 @@ namespace AppBooks
             this.tabControl1.Size = new System.Drawing.Size(675, 486);
             this.tabControl1.TabIndex = 11;
             // 
-            // button1
+            // labelType
             // 
-            this.button1.Location = new System.Drawing.Point(12, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.labelType.AutoSize = true;
+            this.labelType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.Location = new System.Drawing.Point(29, 219);
+            this.labelType.Name = "labelType";
+            this.labelType.Size = new System.Drawing.Size(57, 19);
+            this.labelType.TabIndex = 5;
+            this.labelType.Text = "ประเภท :";
+            // 
+            // lbType
+            // 
+            this.lbType.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbType.Location = new System.Drawing.Point(92, 219);
+            this.lbType.Name = "lbType";
+            this.lbType.Size = new System.Drawing.Size(120, 19);
+            this.lbType.TabIndex = 6;
             // 
             // FormBooks
             // 
@@ -303,14 +269,9 @@ namespace AppBooks
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbEdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label labelTitleOrders;
-        private System.Windows.Forms.Label lbSdate;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelSdate;
         private System.Windows.Forms.Label lbDetail;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label labelDetailBook;
@@ -323,6 +284,7 @@ namespace AppBooks
         private System.Windows.Forms.DataGridView dgvBooks;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbType;
+        private System.Windows.Forms.Label labelType;
     }
 }
