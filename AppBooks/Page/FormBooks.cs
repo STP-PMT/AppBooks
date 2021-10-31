@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,13 @@ namespace AppBooks
             InitializeComponent();
         }
 
+        public byte[] ImageToByteArray(Image image)
+        {
+            var ms = new MemoryStream();
+            image.Save(ms, image.RawFormat);
+            return ms.ToArray();
+        }
+
         private void FormBooks_Load(object sender, EventArgs e)
         {
             dgvBooks.Font = new Font("TH-Sarabun", 10, FontStyle.Regular);
@@ -30,7 +38,7 @@ namespace AppBooks
                      รหัสหนังสือ = b.bid,
                      ชื่อหนังสือ = b.name,
                      รายละเอียด = b.detail,
-                     ประเภท = t.name                     
+                     ประเภท = t.name,       
                  });
 
             dgvBooks.DataSource = result.ToList();
@@ -51,13 +59,19 @@ namespace AppBooks
                 {
                    b.name,
                      b.detail,
-                    type = t.name
+                    type = t.name,
+                    b.image
                 });
                 foreach(var i in result)
                 {
                     lbName.Text = i.name;
                     lbDetail.Text = i.detail;
                     lbType.Text = i.type;
+                    if (i.image != null) 
+                    {
+                        pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(i.image);
+                    }
+                    
                 }
             }
         }

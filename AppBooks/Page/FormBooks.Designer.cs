@@ -36,7 +36,7 @@ namespace AppBooks
             this.lbName = new System.Windows.Forms.Label();
             this.labelDetailBook = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBook = new System.Windows.Forms.PictureBox();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@ namespace AppBooks
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.labelType = new System.Windows.Forms.Label();
             this.lbType = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).BeginInit();
             this.panelDetailOrder.SuspendLayout();
             this.tabAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
@@ -123,15 +123,15 @@ namespace AppBooks
             this.labelName.TabIndex = 1;
             this.labelName.Text = "ชื่อหนังสือ :";
             // 
-            // pictureBox1
+            // pictureBoxBook
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxBook.BackColor = System.Drawing.Color.White;
+            this.pictureBoxBook.Location = new System.Drawing.Point(12, 13);
+            this.pictureBoxBook.Name = "pictureBoxBook";
+            this.pictureBoxBook.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBook.TabIndex = 0;
+            this.pictureBoxBook.TabStop = false;
             // 
             // panelDetailOrder
             // 
@@ -144,7 +144,7 @@ namespace AppBooks
             this.panelDetailOrder.Controls.Add(this.lbName);
             this.panelDetailOrder.Controls.Add(this.labelDetailBook);
             this.panelDetailOrder.Controls.Add(this.labelName);
-            this.panelDetailOrder.Controls.Add(this.pictureBox1);
+            this.panelDetailOrder.Controls.Add(this.pictureBoxBook);
             this.panelDetailOrder.Location = new System.Drawing.Point(694, 189);
             this.panelDetailOrder.Name = "panelDetailOrder";
             this.panelDetailOrder.Size = new System.Drawing.Size(227, 454);
@@ -259,7 +259,7 @@ namespace AppBooks
             this.Name = "FormBooks";
             this.Text = "FormBooks";
             this.Load += new System.EventHandler(this.FormBooks_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).EndInit();
             this.panelDetailOrder.ResumeLayout(false);
             this.panelDetailOrder.PerformLayout();
             this.tabAll.ResumeLayout(false);
@@ -278,7 +278,7 @@ namespace AppBooks
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label labelDetailBook;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxBook;
         private System.Windows.Forms.Panel panelDetailOrder;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbSearch;
