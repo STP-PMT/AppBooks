@@ -160,6 +160,7 @@
             this.btnOk.TabIndex = 15;
             this.btnOk.Text = "ยืนยัน";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // lbTitle
             // 
@@ -192,6 +193,7 @@
             this.MinimizeBox = false;
             this.Name = "FormManageBooks";
             this.Text = "จัดการข้อมูลหนังสือ";
+            this.Load += new System.EventHandler(this.FormManageBooks_Load);
             this.panelTitle.ResumeLayout(false);
             this.panelBody.ResumeLayout(false);
             this.panelBody.PerformLayout();

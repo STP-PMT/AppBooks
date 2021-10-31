@@ -50,11 +50,11 @@ namespace AppBooks
             this.lbName = new System.Windows.Forms.Label();
             this.labelDetailBook = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTitleOrders = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabAll.SuspendLayout();
@@ -71,7 +71,7 @@ namespace AppBooks
             this.dgvOrdersAll.Location = new System.Drawing.Point(3, 3);
             this.dgvOrdersAll.Name = "dgvOrdersAll";
             this.dgvOrdersAll.ReadOnly = true;
-            this.dgvOrdersAll.Size = new System.Drawing.Size(546, 373);
+            this.dgvOrdersAll.Size = new System.Drawing.Size(546, 480);
             this.dgvOrdersAll.TabIndex = 0;
             // 
             // monthCalendar
@@ -92,7 +92,7 @@ namespace AppBooks
             this.tabControl1.Location = new System.Drawing.Point(12, 170);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(560, 405);
+            this.tabControl1.Size = new System.Drawing.Size(560, 512);
             this.tabControl1.TabIndex = 2;
             // 
             // tabAll
@@ -102,7 +102,7 @@ namespace AppBooks
             this.tabAll.Location = new System.Drawing.Point(4, 22);
             this.tabAll.Name = "tabAll";
             this.tabAll.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAll.Size = new System.Drawing.Size(552, 379);
+            this.tabAll.Size = new System.Drawing.Size(552, 486);
             this.tabAll.TabIndex = 0;
             this.tabAll.Text = "ทั้งหมด";
             this.tabAll.UseVisualStyleBackColor = true;
@@ -158,14 +158,14 @@ namespace AppBooks
             this.panelDetailOrder.Controls.Add(this.pictureBox1);
             this.panelDetailOrder.Location = new System.Drawing.Point(584, 192);
             this.panelDetailOrder.Name = "panelDetailOrder";
-            this.panelDetailOrder.Size = new System.Drawing.Size(227, 376);
+            this.panelDetailOrder.Size = new System.Drawing.Size(227, 483);
             this.panelDetailOrder.TabIndex = 5;
             // 
             // lbPhone
             // 
             this.lbPhone.BackColor = System.Drawing.Color.White;
             this.lbPhone.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhone.Location = new System.Drawing.Point(92, 310);
+            this.lbPhone.Location = new System.Drawing.Point(92, 412);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(120, 19);
             this.lbPhone.TabIndex = 12;
@@ -174,7 +174,7 @@ namespace AppBooks
             // 
             this.lbUserName.BackColor = System.Drawing.Color.White;
             this.lbUserName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUserName.Location = new System.Drawing.Point(92, 282);
+            this.lbUserName.Location = new System.Drawing.Point(92, 384);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(120, 19);
             this.lbUserName.TabIndex = 11;
@@ -183,7 +183,7 @@ namespace AppBooks
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 310);
+            this.label6.Location = new System.Drawing.Point(21, 412);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 19);
             this.label6.TabIndex = 10;
@@ -193,7 +193,7 @@ namespace AppBooks
             // 
             this.labelUser.AutoSize = true;
             this.labelUser.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.Location = new System.Drawing.Point(43, 282);
+            this.labelUser.Location = new System.Drawing.Point(43, 384);
             this.labelUser.Name = "labelUser";
             this.labelUser.Size = new System.Drawing.Size(41, 19);
             this.labelUser.TabIndex = 9;
@@ -203,7 +203,7 @@ namespace AppBooks
             // 
             this.lbEdate.BackColor = System.Drawing.Color.White;
             this.lbEdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEdate.Location = new System.Drawing.Point(92, 247);
+            this.lbEdate.Location = new System.Drawing.Point(92, 349);
             this.lbEdate.Name = "lbEdate";
             this.lbEdate.Size = new System.Drawing.Size(120, 19);
             this.lbEdate.TabIndex = 8;
@@ -212,7 +212,7 @@ namespace AppBooks
             // 
             this.lbSdate.BackColor = System.Drawing.Color.White;
             this.lbSdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSdate.Location = new System.Drawing.Point(92, 219);
+            this.lbSdate.Location = new System.Drawing.Point(92, 321);
             this.lbSdate.Name = "lbSdate";
             this.lbSdate.Size = new System.Drawing.Size(120, 19);
             this.lbSdate.TabIndex = 7;
@@ -221,7 +221,7 @@ namespace AppBooks
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 247);
+            this.label2.Location = new System.Drawing.Point(13, 349);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 6;
@@ -231,7 +231,7 @@ namespace AppBooks
             // 
             this.labelSdate.AutoSize = true;
             this.labelSdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSdate.Location = new System.Drawing.Point(30, 219);
+            this.labelSdate.Location = new System.Drawing.Point(30, 321);
             this.labelSdate.Name = "labelSdate";
             this.labelSdate.Size = new System.Drawing.Size(56, 19);
             this.labelSdate.TabIndex = 5;
@@ -241,7 +241,7 @@ namespace AppBooks
             // 
             this.lbDetail.BackColor = System.Drawing.Color.White;
             this.lbDetail.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDetail.Location = new System.Drawing.Point(92, 152);
+            this.lbDetail.Location = new System.Drawing.Point(92, 254);
             this.lbDetail.Name = "lbDetail";
             this.lbDetail.Size = new System.Drawing.Size(120, 52);
             this.lbDetail.TabIndex = 4;
@@ -250,7 +250,7 @@ namespace AppBooks
             // 
             this.lbName.BackColor = System.Drawing.Color.White;
             this.lbName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(92, 123);
+            this.lbName.Location = new System.Drawing.Point(92, 225);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(120, 19);
             this.lbName.TabIndex = 3;
@@ -259,7 +259,7 @@ namespace AppBooks
             // 
             this.labelDetailBook.AutoSize = true;
             this.labelDetailBook.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDetailBook.Location = new System.Drawing.Point(8, 152);
+            this.labelDetailBook.Location = new System.Drawing.Point(8, 254);
             this.labelDetailBook.Name = "labelDetailBook";
             this.labelDetailBook.Size = new System.Drawing.Size(78, 19);
             this.labelDetailBook.TabIndex = 2;
@@ -269,20 +269,11 @@ namespace AppBooks
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(13, 123);
+            this.labelName.Location = new System.Drawing.Point(13, 225);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(73, 19);
             this.labelName.TabIndex = 1;
             this.labelName.Text = "ชื่อหนังสือ :";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 95);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // labelTitleOrders
             // 
@@ -326,11 +317,20 @@ namespace AppBooks
             this.btnBorrow.Text = "ยืมหนังสือ";
             this.btnBorrow.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 587);
+            this.ClientSize = new System.Drawing.Size(829, 694);
             this.Controls.Add(this.btnBorrow);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);

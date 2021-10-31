@@ -38,8 +38,8 @@ namespace AppBooks
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +57,7 @@ namespace AppBooks
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(204, 652);
+            this.panelMenu.Size = new System.Drawing.Size(204, 727);
             this.panelMenu.TabIndex = 0;
             // 
             // labelName
@@ -67,7 +67,7 @@ namespace AppBooks
             this.labelName.AutoSize = true;
             this.labelName.BackColor = System.Drawing.Color.White;
             this.labelName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(40, 624);
+            this.labelName.Location = new System.Drawing.Point(40, 699);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(119, 19);
             this.labelName.TabIndex = 0;
@@ -152,6 +152,14 @@ namespace AppBooks
             this.label1.TabIndex = 1;
             this.label1.Text = "ห้องสมุด";
             // 
+            // panelDetail
+            // 
+            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDetail.Location = new System.Drawing.Point(204, 0);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(946, 727);
+            this.panelDetail.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -164,19 +172,11 @@ namespace AppBooks
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panelDetail
-            // 
-            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDetail.Location = new System.Drawing.Point(204, 0);
-            this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(946, 652);
-            this.panelDetail.TabIndex = 1;
-            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 652);
+            this.ClientSize = new System.Drawing.Size(1150, 727);
             this.Controls.Add(this.panelDetail);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
