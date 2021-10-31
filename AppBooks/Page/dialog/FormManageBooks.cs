@@ -75,7 +75,7 @@ namespace AppBooks.Page.dialog
                 {
                     book.image = null;
                 }              
-                //context.Books.Add(book);
+                context.Books.Add(book);
                 int check = context.SaveChanges();
                 if (check == 1)
                 {

@@ -47,6 +47,7 @@ namespace AppBooks
 
         private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            pictureBoxBook.Image = null;
             if (e.RowIndex > -1 && e.ColumnIndex > -1 && dgvBooks.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dgvBooks.CurrentRow.Selected = true;
