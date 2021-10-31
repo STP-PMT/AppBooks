@@ -65,17 +65,14 @@ namespace AppBooks
                      b.detail,
                     type = t.name,
                     b.image
-                });
-                foreach(var i in result)
+                }).FirstOrDefault();
+                lbName.Text = result.name;
+                lbDetail.Text = result.detail;
+                lbType.Text = result.type;
+                if (result.image != null) 
                 {
-                    lbName.Text = i.name;
-                    lbDetail.Text = i.detail;
-                    lbType.Text = i.type;
-                    if (i.image != null) 
-                    {
-                        pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(i.image);
-                    }                    
-                }
+                   pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
+                }                    
             }
         }
 
@@ -83,6 +80,10 @@ namespace AppBooks
         {
             FormManageBooks form = new FormManageBooks();           
             form.ShowDialog();
+            if (form.status == 1)
+            {
+                FormBooks_Load(sender, e);
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -90,6 +91,11 @@ namespace AppBooks
             if (bid != -1) {
                 FormManageBooks form = new FormManageBooks(bid);
                 form.ShowDialog();
+                if (form.status == 1) 
+                {
+                    FormBooks_Load(sender, e);
+                }
+               
             }
             bid = -1;
         }

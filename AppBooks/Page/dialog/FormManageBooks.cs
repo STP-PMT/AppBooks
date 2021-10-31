@@ -14,20 +14,23 @@ namespace AppBooks.Page.dialog
     public partial class FormManageBooks : Form
     {
 
-        int bid =-1;
+        int bid = -1;
+        public int status { get; set; }
         Dictionary<string, int> bookType = new Dictionary<string, int>();
         dbBookEntities context = new dbBookEntities();
         public FormManageBooks()
         {
             InitializeComponent();
-            
+
         }
+
         public FormManageBooks(int id)
         {
             this.bid = id;
             InitializeComponent();
 
         }
+     
 
         public byte[] ImageToByteArray(Image image)
         {
@@ -72,9 +75,9 @@ namespace AppBooks.Page.dialog
                     type = t.name,
                     b.image
                 }).FirstOrDefault();
-                    tbNameBook.Text = result.name;
-                    tbDetail.Text = result.detail;
-                    cbbBook.Text = result.type;
+                    tbNameBook.Text = result.name.Trim();
+                    tbDetail.Text = result.detail.Trim();
+                    cbbBook.Text = result.type.Trim();
                     if (result.image != null)
                     {
                         pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
@@ -84,7 +87,6 @@ namespace AppBooks.Page.dialog
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-
             Book book = new Book();
             if (bid != -1)
             {
@@ -109,6 +111,7 @@ namespace AppBooks.Page.dialog
                 if (check == 1)
                 {
                     MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
+                    Dispose();
                 }
                 else
                 {
@@ -134,12 +137,18 @@ namespace AppBooks.Page.dialog
                 if (check == 1)
                 {
                     MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
+                    Dispose();
                 }
                 else
                 {
                     MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
                 }
             }
+        }
+
+        private void FormManageBooks_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            status = 1;
         }
     }
 }

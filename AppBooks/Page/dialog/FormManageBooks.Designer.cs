@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManageBooks));
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.panelBody = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnFile = new System.Windows.Forms.Button();
+            this.pictureBoxBook = new System.Windows.Forms.PictureBox();
+            this.cbbBook = new System.Windows.Forms.ComboBox();
+            this.tbDetail = new System.Windows.Forms.TextBox();
+            this.tbNameBook = new System.Windows.Forms.TextBox();
             this.labelType = new System.Windows.Forms.Label();
             this.labelDetailBook = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.tbNameBook = new System.Windows.Forms.TextBox();
-            this.tbDetail = new System.Windows.Forms.TextBox();
-            this.cbbBook = new System.Windows.Forms.ComboBox();
-            this.pictureBoxBook = new System.Windows.Forms.PictureBox();
             this.openFileDialogBook = new System.Windows.Forms.OpenFileDialog();
-            this.btnFile = new System.Windows.Forms.Button();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.panelBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).BeginInit();
@@ -56,6 +56,15 @@
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(460, 56);
             this.panelTitle.TabIndex = 0;
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(142, 9);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(176, 29);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "เพิ่มข้อมูลหนังสือ";
             // 
             // panelBody
             // 
@@ -74,6 +83,69 @@
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(460, 267);
             this.panelBody.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(387, 232);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(52, 23);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "ยกเลิก";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(323, 232);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(58, 23);
+            this.btnOk.TabIndex = 15;
+            this.btnOk.Text = "ยืนยัน";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnFile
+            // 
+            this.btnFile.Location = new System.Drawing.Point(323, 171);
+            this.btnFile.Name = "btnFile";
+            this.btnFile.Size = new System.Drawing.Size(116, 23);
+            this.btnFile.TabIndex = 13;
+            this.btnFile.Text = "เปิดไฟล์";
+            this.btnFile.UseVisualStyleBackColor = true;
+            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
+            // 
+            // pictureBoxBook
+            // 
+            this.pictureBoxBook.BackColor = System.Drawing.Color.White;
+            this.pictureBoxBook.Location = new System.Drawing.Point(323, 49);
+            this.pictureBoxBook.Name = "pictureBoxBook";
+            this.pictureBoxBook.Size = new System.Drawing.Size(116, 116);
+            this.pictureBoxBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBook.TabIndex = 12;
+            this.pictureBoxBook.TabStop = false;
+            // 
+            // cbbBook
+            // 
+            this.cbbBook.FormattingEnabled = true;
+            this.cbbBook.Location = new System.Drawing.Point(122, 144);
+            this.cbbBook.Name = "cbbBook";
+            this.cbbBook.Size = new System.Drawing.Size(172, 21);
+            this.cbbBook.TabIndex = 11;
+            // 
+            // tbDetail
+            // 
+            this.tbDetail.Location = new System.Drawing.Point(122, 78);
+            this.tbDetail.Multiline = true;
+            this.tbDetail.Name = "tbDetail";
+            this.tbDetail.Size = new System.Drawing.Size(172, 60);
+            this.tbDetail.TabIndex = 10;
+            // 
+            // tbNameBook
+            // 
+            this.tbNameBook.Location = new System.Drawing.Point(122, 49);
+            this.tbNameBook.Name = "tbNameBook";
+            this.tbNameBook.Size = new System.Drawing.Size(172, 20);
+            this.tbNameBook.TabIndex = 9;
             // 
             // labelType
             // 
@@ -105,81 +177,9 @@
             this.labelName.TabIndex = 6;
             this.labelName.Text = "ชื่อหนังสือ :";
             // 
-            // tbNameBook
-            // 
-            this.tbNameBook.Location = new System.Drawing.Point(122, 49);
-            this.tbNameBook.Name = "tbNameBook";
-            this.tbNameBook.Size = new System.Drawing.Size(172, 20);
-            this.tbNameBook.TabIndex = 9;
-            // 
-            // tbDetail
-            // 
-            this.tbDetail.Location = new System.Drawing.Point(122, 78);
-            this.tbDetail.Multiline = true;
-            this.tbDetail.Name = "tbDetail";
-            this.tbDetail.Size = new System.Drawing.Size(172, 60);
-            this.tbDetail.TabIndex = 10;
-            // 
-            // cbbBook
-            // 
-            this.cbbBook.FormattingEnabled = true;
-            this.cbbBook.Location = new System.Drawing.Point(122, 144);
-            this.cbbBook.Name = "cbbBook";
-            this.cbbBook.Size = new System.Drawing.Size(172, 21);
-            this.cbbBook.TabIndex = 11;
-            // 
-            // pictureBoxBook
-            // 
-            this.pictureBoxBook.BackColor = System.Drawing.Color.White;
-            this.pictureBoxBook.Location = new System.Drawing.Point(323, 49);
-            this.pictureBoxBook.Name = "pictureBoxBook";
-            this.pictureBoxBook.Size = new System.Drawing.Size(116, 116);
-            this.pictureBoxBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBook.TabIndex = 12;
-            this.pictureBoxBook.TabStop = false;
-            // 
             // openFileDialogBook
             // 
             this.openFileDialogBook.FileName = "openFileDialog1";
-            // 
-            // btnFile
-            // 
-            this.btnFile.Location = new System.Drawing.Point(323, 171);
-            this.btnFile.Name = "btnFile";
-            this.btnFile.Size = new System.Drawing.Size(116, 23);
-            this.btnFile.TabIndex = 13;
-            this.btnFile.Text = "เปิดไฟล์";
-            this.btnFile.UseVisualStyleBackColor = true;
-            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
-            // 
-            // btnOk
-            // 
-            this.btnOk.Location = new System.Drawing.Point(323, 232);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(58, 23);
-            this.btnOk.TabIndex = 15;
-            this.btnOk.Text = "ยืนยัน";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(142, 9);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(176, 29);
-            this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "เพิ่มข้อมูลหนังสือ";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(387, 232);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(52, 23);
-            this.btnClose.TabIndex = 16;
-            this.btnClose.Text = "ยกเลิก";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FormManageBooks
             // 
@@ -193,6 +193,7 @@
             this.MinimizeBox = false;
             this.Name = "FormManageBooks";
             this.Text = "จัดการข้อมูลหนังสือ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormManageBooks_FormClosed);
             this.Load += new System.EventHandler(this.FormManageBooks_Load);
             this.panelTitle.ResumeLayout(false);
             this.panelBody.ResumeLayout(false);
