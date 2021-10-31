@@ -74,6 +74,8 @@ namespace AppBooks.Page.dialog
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.lbText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormDeleteBooks";
             this.Text = "ลบข้อมูล";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDelete_FormClosed);
