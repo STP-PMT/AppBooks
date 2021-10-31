@@ -52,12 +52,6 @@
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Page\dialog\FormManageBooks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\dialog\FormManageBooks.Designer.cs">
-      <DependentUpon>FormManageBooks.cs</DependentUpon>
-    </Compile>
     <Compile Include="Page\dialog\FormManageOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,9 +86,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\dialog\FormManageBooks.resx">
-      <DependentUpon>FormManageBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page\dialog\FormManageOrders.resx">
       <DependentUpon>FormManageOrders.cs</DependentUpon>
