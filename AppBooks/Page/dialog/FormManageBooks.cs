@@ -123,6 +123,7 @@ namespace AppBooks.Page.dialog
                 book.name = tbNameBook.Text.Trim();
                 book.detail = tbDetail.Text.Trim();
                 book.type = cbbBook.SelectedItem != null ? bookType[ cbbBook.SelectedItem.ToString()]:1;
+                book.status = 0;
                 Console.WriteLine(book.type);
                 if (pictureBoxBook.Image != null)
                 {

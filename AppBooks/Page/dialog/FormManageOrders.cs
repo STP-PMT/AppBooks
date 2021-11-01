@@ -20,12 +20,19 @@ namespace AppBooks.Page.dialog
 
         private void FormManageOrders_Load(object sender, EventArgs e)
         {
-
+            dtpOrders.MaxDate = dtpOrders.Value.AddDays(7);
+            dtpOrders.MinDate = dtpOrders.Value;
+            lbDate.Text = dtpOrders.Value.Date.ToString("dd.MM.yyyy");
         }
 
         private void FormManageOrders_FormClosed(object sender, FormClosedEventArgs e)
         {
             status = 1;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

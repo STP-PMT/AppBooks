@@ -46,6 +46,8 @@ namespace AppBooks
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.lbStatus = new System.Windows.Forms.Label();
             this.panelDetailOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).BeginInit();
             this.tabAll.SuspendLayout();
@@ -130,6 +132,8 @@ namespace AppBooks
             this.panelDetailOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDetailOrder.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelDetailOrder.Controls.Add(this.lbStatus);
+            this.panelDetailOrder.Controls.Add(this.labelStatus);
             this.panelDetailOrder.Controls.Add(this.lbType);
             this.panelDetailOrder.Controls.Add(this.labelType);
             this.panelDetailOrder.Controls.Add(this.lbDetail);
@@ -246,6 +250,25 @@ namespace AppBooks
             this.tabControl1.Size = new System.Drawing.Size(675, 486);
             this.tabControl1.TabIndex = 11;
             // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.Location = new System.Drawing.Point(36, 364);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(50, 19);
+            this.labelStatus.TabIndex = 7;
+            this.labelStatus.Text = "สถานะ :";
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbStatus.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatus.Location = new System.Drawing.Point(92, 364);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(120, 19);
+            this.lbStatus.TabIndex = 8;
+            // 
             // FormBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,5 +314,7 @@ namespace AppBooks
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label lbType;
         private System.Windows.Forms.Label labelType;
+        private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.Label lbStatus;
     }
 }
