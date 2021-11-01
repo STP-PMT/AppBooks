@@ -98,7 +98,6 @@ namespace AppBooks
                 {
                     FormBooks_Load(sender, e);
                 }
-               
             }
             bid = -1;
         }
