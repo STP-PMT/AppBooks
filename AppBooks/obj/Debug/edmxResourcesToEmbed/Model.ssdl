@@ -16,8 +16,8 @@
     </Key>
     <Property Name="bid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="type" Type="int" Nullable="false" />
-    <Property Name="name" Type="varchar" MaxLength="50" />
-    <Property Name="detail" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="nchar" MaxLength="50" />
+    <Property Name="detail" Type="nchar" MaxLength="50" />
     <Property Name="status" Type="int" />
     <Property Name="image" Type="image" />
   </EntityType>
@@ -29,6 +29,7 @@
     <Property Name="bid" Type="int" Nullable="false" />
     <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
     <Property Name="phone" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="price" Type="int" />
     <Property Name="sdate" Type="date" Nullable="false" />
     <Property Name="edate" Type="date" Nullable="false" />
   </EntityType>
@@ -40,7 +41,9 @@
     <Property Name="name" Type="nchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Books_Type">
-    <End Role="Type" Type="Self.Type" Multiplicity="1" />
+    <End Role="Type" Type="Self.Type" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Books" Type="Self.Books" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Type">
@@ -52,7 +55,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Orders_Books">
-    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Books">

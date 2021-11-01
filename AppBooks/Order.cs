@@ -18,6 +18,7 @@ namespace AppBooks
         public int bid { get; set; }
         public string name { get; set; }
         public string phone { get; set; }
+        public Nullable<int> price { get; set; }
         public System.DateTime sdate { get; set; }
         public System.DateTime edate { get; set; }
     

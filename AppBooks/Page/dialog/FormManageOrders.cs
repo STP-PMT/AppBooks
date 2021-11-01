@@ -12,9 +12,190 @@ namespace AppBooks.Page.dialog
 {
     public partial class FormManageOrders : Form
     {
+        int oid = -1;
+        int bid = -1;
+        public int status { get; set; }
+        private dbBookEntities context = new dbBookEntities();
         public FormManageOrders()
         {
             InitializeComponent();
+        }
+        public FormManageOrders(int id)
+        {
+            this.oid = id;
+            InitializeComponent();
+        }
+
+        private void FormManageOrders_Load(object sender, EventArgs e)
+        {
+            dgvManageOrders.Font = new Font("TH-Sarabun", 10, FontStyle.Regular);
+            dtpSdate.Value = DateTime.Now;
+            var result = (
+                 from b in context.Books
+                 join t in context.Types
+                 on b.type equals t.tid
+                 where b.status == 0
+                 select new
+                 {
+                     รหัสหนังสือ = b.bid,
+                     ชื่อหนังสือ = b.name,
+                     ประเภท = t.name,
+                 });
+
+            dgvManageOrders.DataSource = result.ToList();
+            if (oid != -1)
+            {
+                lbTitle.Text = "แก้ไขข้อมูล";
+                var rsOrder = (
+                from o in context.Orders
+                join b in context.Books on o.bid equals b.bid
+                where o.oid == oid
+                select new
+                {
+                    o.name,
+                    o.phone,
+                    book = b.name,
+                    b.bid,
+                    o.sdate,
+                    o.edate
+
+                }).FirstOrDefault();
+                tbName.Text = rsOrder.name.Trim();
+                tbPhone.Text = rsOrder.phone.Trim();
+                lbBookName.Text = rsOrder.book.Trim();
+                dtpSdate.Value = Convert.ToDateTime(rsOrder.sdate);
+                dtpOrders.Value = Convert.ToDateTime(rsOrder.edate);
+                dtpOrders.MaxDate = Convert.ToDateTime(rsOrder.sdate).AddDays(7);
+                dtpOrders.MinDate = Convert.ToDateTime(rsOrder.sdate);
+                
+                bid = rsOrder.bid;
+            }
+            else {
+                dtpOrders.MaxDate = dtpOrders.Value.AddDays(7);
+                dtpOrders.MinDate = dtpOrders.Value;
+            }
+        }
+
+        private void FormManageOrders_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            status = 1;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void dgvManageOrders_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1 && dgvManageOrders.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dgvManageOrders.CurrentRow.Selected = true;
+                int id = int.Parse(dgvManageOrders.Rows[e.RowIndex].Cells["รหัสหนังสือ"].FormattedValue.ToString());
+                bid = id;
+                var result = (
+                from b in context.Books
+                where b.bid == id
+                select new
+                {
+                    b.name,
+                }).FirstOrDefault();
+                lbBookName.Text = result.name;
+            }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            if (checkNull()) {
+                if (oid != -1)
+                {
+                    int temp = -1;
+                    order = (from o in context.Orders where o.oid == oid select o).FirstOrDefault();
+                    if (order == null) return;
+                    order.name = tbName.Text;
+                    order.phone = tbPhone.Text;
+                    temp = order.bid;
+                    order.bid = bid;
+                    order.sdate = dtpSdate.Value;
+                    order.edate = dtpOrders.Value;
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        if (temp != -1) 
+                        {
+                            var book = (from b in context.Books where b.bid == temp select b).FirstOrDefault();
+                            book.status = 0;
+                            context.SaveChanges();
+                        }
+                        var book1 = (from b in context.Books where b.bid == bid select b).FirstOrDefault();
+                        book1.status = 1;
+                        context.SaveChanges();
+                        MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("แก้ไขข้อมูลไม่สำเร็จ");
+                    }
+                }
+                else
+                {
+                    order.name = tbName.Text;
+                    order.phone = tbPhone.Text;
+                    order.bid = bid;
+                    order.sdate = dtpSdate.Value;
+                    order.edate = dtpOrders.Value;
+                    context.Orders.Add(order);
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        var book1 = (from b in context.Books where b.bid == bid select b).FirstOrDefault();
+                        book1.status = 1;
+                        context.SaveChanges();
+                        MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
+                    }
+                }
+            
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private bool checkNull() {
+            if (tbName.Text.Equals("")) {
+                MessageBox.Show("ใส่ข้อมูลชื่อ");
+                return false;
+            }
+            if (int.TryParse(tbName.Text, out int value))
+            {
+                MessageBox.Show("ข้อมูลชื่อห้ามมีตัวเลข");
+                return false;
+            }
+            if (tbPhone.Text.Length != 10)
+            {
+                MessageBox.Show("เบอร์โทรต้องมี 10 ตัว");
+                return false;
+            }
+            if (!int.TryParse(tbPhone.Text, out int phone))
+            {
+                MessageBox.Show("เบอร์โทรไม่ถูกต้อง");
+                return false;
+            }
+            if (bid == -1)
+            {
+                MessageBox.Show("โปรดเลือกหนังสือ");
+                return false;
+            }
+            return true;
         }
     }
 }

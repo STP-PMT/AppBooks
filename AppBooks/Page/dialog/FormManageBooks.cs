@@ -30,7 +30,7 @@ namespace AppBooks.Page.dialog
             InitializeComponent();
 
         }
-     
+
 
         public byte[] ImageToByteArray(Image image)
         {
@@ -60,7 +60,7 @@ namespace AppBooks.Page.dialog
                 bookType.Add(t.name, t.tid);
                 cbbBook.Items.Add(t.name);
             }
-            if(bid != -1)
+            if (bid != -1)
             {
                 lbTitle.Text = "แก้ไขข้อมูล";
                 var result = (
@@ -75,73 +75,77 @@ namespace AppBooks.Page.dialog
                     type = t.name,
                     b.image
                 }).FirstOrDefault();
-                    tbNameBook.Text = result.name.Trim();
-                    tbDetail.Text = result.detail.Trim();
-                    cbbBook.Text = result.type.Trim();
-                    if (result.image != null)
-                    {
-                        pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
-                    }
+                tbNameBook.Text = result.name.Trim();
+                tbDetail.Text = result.detail.Trim();
+                cbbBook.Text = result.type.Trim();
+                if (result.image != null)
+                {
+                    pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
+                }
             }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             Book book = new Book();
-            if (bid != -1)
+            if (checkNull())
             {
-                book = (
-                from b in context.Books
-                where b.bid == bid
-                select b).FirstOrDefault();
-                if (book == null) return;
-                book.name = tbNameBook.Text.Trim();
-                book.detail = tbDetail.Text.Trim();
-                book.type = cbbBook.SelectedItem != null ? bookType[cbbBook.SelectedItem.ToString()] : 1;
-                Console.WriteLine(book.type);
-                if (pictureBoxBook.Image != null)
+                if (bid != -1)
                 {
-                    book.image = ImageToByteArray(pictureBoxBook.Image);
+                    book = (
+                    from b in context.Books
+                    where b.bid == bid
+                    select b).FirstOrDefault();
+                    if (book == null) return;
+                    book.name = tbNameBook.Text.Trim();
+                    book.detail = tbDetail.Text.Trim();
+                    book.type = cbbBook.SelectedItem != null ? bookType[cbbBook.SelectedItem.ToString()] : 1;
+                    Console.WriteLine(book.type);
+                    if (pictureBoxBook.Image != null)
+                    {
+                        book.image = ImageToByteArray(pictureBoxBook.Image);
+                    }
+                    else
+                    {
+                        book.image = null;
+                    }
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("แก้ไขข้อมูลไม่สำเร็จ");
+                    }
                 }
                 else
                 {
-                    book.image = null;
-                } 
-                int check = context.SaveChanges();
-                if (check == 1)
-                {
-                    MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
-                    Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("แก้ไขข้อมูลไม่สำเร็จ");
-                }
-            }
-            else
-            {                
-                book.name = tbNameBook.Text.Trim();
-                book.detail = tbDetail.Text.Trim();
-                book.type = cbbBook.SelectedItem != null ? bookType[ cbbBook.SelectedItem.ToString()]:1;
-                Console.WriteLine(book.type);
-                if (pictureBoxBook.Image != null)
-                {
-                    book.image = ImageToByteArray(pictureBoxBook.Image);
-                }
-                else
-                {
-                    book.image = null;
-                }              
-                context.Books.Add(book);
-                int check = context.SaveChanges();
-                if (check == 1)
-                {
-                    MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
-                    Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
+                    book.name = tbNameBook.Text.Trim();
+                    book.detail = tbDetail.Text.Trim();
+                    book.type = cbbBook.SelectedItem != null ? bookType[cbbBook.SelectedItem.ToString()] : 1;
+                    book.status = 0;
+                    Console.WriteLine(book.type);
+                    if (pictureBoxBook.Image != null)
+                    {
+                        book.image = ImageToByteArray(pictureBoxBook.Image);
+                    }
+                    else
+                    {
+                        book.image = null;
+                    }
+                    context.Books.Add(book);
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
+                    }
                 }
             }
         }
@@ -149,6 +153,20 @@ namespace AppBooks.Page.dialog
         private void FormManageBooks_FormClosed(object sender, FormClosedEventArgs e)
         {
             status = 1;
+        }
+        private bool checkNull()
+        {
+            if (tbNameBook.Text.Equals(""))
+            {
+                MessageBox.Show("ใส่ข้อมูลชื่อหนังสือ");
+                return false;
+            }
+            if (cbbBook.SelectedItem == null)
+            {
+                MessageBox.Show("เลือกประเภทหนังสือ");
+                return false;
+            }
+            return true;
         }
     }
 }

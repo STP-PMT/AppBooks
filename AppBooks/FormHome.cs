@@ -12,7 +12,9 @@ namespace AppBooks
 {
     public partial class FormHome : Form
     {
-        private Color c = Color.FromArgb(100, 70, 185, 255);
+        private Color c = Color.MediumTurquoise;
+        private Form temp = null;
+
         public FormHome()
         {
             InitializeComponent();
@@ -20,13 +22,13 @@ namespace AppBooks
 
         private void setColorButton()
         {
-            btnHome.BackColor = Color.White;
+          
             btnBooks.BackColor = Color.White;
-            btnOrders.BackColor = Color.White;           
+            btnOrders.BackColor = Color.White;
             btnReport.BackColor = Color.White;
         }
 
-        private Form temp = null;
+        
         private void openChildForm(Form form)
         {
             if(temp !=null)
@@ -42,14 +44,7 @@ namespace AppBooks
             form.BringToFront();
             form.Show();
         }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            setColorButton();
-            btnHome.BackColor = c;
-            openChildForm(new FormPageHome());
-        }
-
+       
         private void btnOrders_Click(object sender, EventArgs e)
         {
             setColorButton();
@@ -64,18 +59,16 @@ namespace AppBooks
             openChildForm(new FormBooks());
         }
 
+        private void FormHome_Load(object sender, EventArgs e)
+        {
+            btnOrders_Click(sender, e);
+        }
+
         private void btnReport_Click(object sender, EventArgs e)
         {
             setColorButton();
             btnReport.BackColor = c;
             openChildForm(new FormReport());
-        }
-
-        private void FormHome_Load(object sender, EventArgs e)
-        {
-            setColorButton();
-            btnHome.BackColor = c;
-            openChildForm(new FormPageHome());
         }
     }
 }
