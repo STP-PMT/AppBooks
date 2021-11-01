@@ -88,61 +88,64 @@ namespace AppBooks.Page.dialog
         private void btnOk_Click(object sender, EventArgs e)
         {
             Book book = new Book();
-            if (bid != -1)
+            if(checkNull())
             {
-                book = (
-                from b in context.Books
-                where b.bid == bid
-                select b).FirstOrDefault();
-                if (book == null) return;
-                book.name = tbNameBook.Text.Trim();
-                book.detail = tbDetail.Text.Trim();
-                book.type = cbbBook.SelectedItem != null ? bookType[cbbBook.SelectedItem.ToString()] : 1;
-                Console.WriteLine(book.type);
-                if (pictureBoxBook.Image != null)
+                if (bid != -1)
                 {
-                    book.image = ImageToByteArray(pictureBoxBook.Image);
+                    book = (
+                    from b in context.Books
+                    where b.bid == bid
+                    select b).FirstOrDefault();
+                    if (book == null) return;
+                    book.name = tbNameBook.Text.Trim();
+                    book.detail = tbDetail.Text.Trim();
+                    book.type = cbbBook.SelectedItem != null ? bookType[cbbBook.SelectedItem.ToString()] : 1;
+                    Console.WriteLine(book.type);
+                    if (pictureBoxBook.Image != null)
+                    {
+                        book.image = ImageToByteArray(pictureBoxBook.Image);
+                    }
+                    else
+                    {
+                        book.image = null;
+                    }
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("แก้ไขข้อมูลไม่สำเร็จ");
+                    }
                 }
                 else
                 {
-                    book.image = null;
-                } 
-                int check = context.SaveChanges();
-                if (check == 1)
-                {
-                    MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
-                    Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("แก้ไขข้อมูลไม่สำเร็จ");
-                }
-            }
-            else
-            {                
-                book.name = tbNameBook.Text.Trim();
-                book.detail = tbDetail.Text.Trim();
-                book.type = cbbBook.SelectedItem != null ? bookType[ cbbBook.SelectedItem.ToString()]:1;
-                book.status = 0;
-                Console.WriteLine(book.type);
-                if (pictureBoxBook.Image != null)
-                {
-                    book.image = ImageToByteArray(pictureBoxBook.Image);
-                }
-                else
-                {
-                    book.image = null;
-                }              
-                context.Books.Add(book);
-                int check = context.SaveChanges();
-                if (check == 1)
-                {
-                    MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
-                    Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
+                    book.name = tbNameBook.Text.Trim();
+                    book.detail = tbDetail.Text.Trim();
+                    book.type = cbbBook.SelectedItem != null ? bookType[cbbBook.SelectedItem.ToString()] : 1;
+                    book.status = 0;
+                    Console.WriteLine(book.type);
+                    if (pictureBoxBook.Image != null)
+                    {
+                        book.image = ImageToByteArray(pictureBoxBook.Image);
+                    }
+                    else
+                    {
+                        book.image = null;
+                    }
+                    context.Books.Add(book);
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
+                    }
                 }
             }
         }
@@ -150,6 +153,20 @@ namespace AppBooks.Page.dialog
         private void FormManageBooks_FormClosed(object sender, FormClosedEventArgs e)
         {
             status = 1;
+        }
+        private bool checkNull()
+        {
+            if (tbNameBook.Text.Equals(""))
+            {
+                MessageBox.Show("ใส่ข้อมูลชื่อหนังสือ");
+                return false;
+            }
+            if (cbbBook.SelectedItem == null)
+            {
+                MessageBox.Show("เลือกประเภทหนังสือ");
+                return false;
+            }
+            return true;
         }
     }
 }
