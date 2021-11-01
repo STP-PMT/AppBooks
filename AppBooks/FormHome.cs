@@ -22,9 +22,10 @@ namespace AppBooks
 
         private void setColorButton()
         {
-            btnHome.BackColor = Color.White;
+          
             btnBooks.BackColor = Color.White;
-            btnOrders.BackColor = Color.White;                     
+            btnOrders.BackColor = Color.White;
+            btnReport.BackColor = Color.White;
         }
 
         
@@ -43,14 +44,7 @@ namespace AppBooks
             form.BringToFront();
             form.Show();
         }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            setColorButton();
-            btnHome.BackColor = c;
-            openChildForm(new FormPageHome());
-        }
-
+       
         private void btnOrders_Click(object sender, EventArgs e)
         {
             setColorButton();
@@ -67,9 +61,14 @@ namespace AppBooks
 
         private void FormHome_Load(object sender, EventArgs e)
         {
+            btnOrders_Click(sender, e);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
             setColorButton();
-            btnHome.BackColor = c;
-            openChildForm(new FormPageHome());
+            btnReport.BackColor = c;
+            openChildForm(new FormReport());
         }
     }
 }

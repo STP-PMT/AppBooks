@@ -16,3 +16,4 @@ D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\EntityFramework.SqlSer
 D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\EntityFramework.xml
 D:\Documents\APD\project book\AppBooks\AppBooks\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.Page.dialog.FormManageBooks.resources
+D:\Documents\APD\project book\AppBooks\AppBooks\obj\Debug\AppBooks.FormReport.resources
