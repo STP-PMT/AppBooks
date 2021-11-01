@@ -40,7 +40,7 @@ namespace AppBooks
                      รหัสหนังสือ = b.bid,
                      ชื่อหนังสือ = b.name,
                      รายละเอียด = b.detail,
-                     ประเภท = t.name,       
+                     ประเภท = t.name,
                  });
 
             dgvBooks.DataSource = result.ToList();
@@ -52,7 +52,7 @@ namespace AppBooks
             if (e.RowIndex > -1 && e.ColumnIndex > -1 && dgvBooks.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dgvBooks.CurrentRow.Selected = true;
-                int id = int.Parse( dgvBooks.Rows[e.RowIndex].Cells["รหัสหนังสือ"].FormattedValue.ToString());
+                int id = int.Parse(dgvBooks.Rows[e.RowIndex].Cells["รหัสหนังสือ"].FormattedValue.ToString());
                 bid = id;
                 var result = (
                 from b in context.Books
@@ -61,8 +61,8 @@ namespace AppBooks
                 where b.bid == id
                 select new
                 {
-                   b.name,
-                     b.detail,
+                    b.name,
+                    b.detail,
                     type = t.name,
                     b.image,
                     b.status
@@ -71,17 +71,17 @@ namespace AppBooks
                 lbDetail.Text = result.detail;
                 lbType.Text = result.type;
                 lbStatus.Text = (result.status == 0) ? "มีอยู่" : "ถูกยืม";
-               
-                if (result.image != null) 
+
+                if (result.image != null)
                 {
-                   pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
-                }                    
+                    pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
+                }
             }
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            FormManageBooks form = new FormManageBooks();           
+            FormManageBooks form = new FormManageBooks();
             form.ShowDialog();
             if (form.status == 1)
             {
@@ -91,10 +91,11 @@ namespace AppBooks
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (bid != -1) {
+            if (bid != -1)
+            {
                 FormManageBooks form = new FormManageBooks(bid);
                 form.ShowDialog();
-                if (form.status == 1) 
+                if (form.status == 1)
                 {
                     FormBooks_Load(sender, e);
                 }

@@ -340,6 +340,7 @@ namespace AppBooks
             this.btnBack.TabIndex = 13;
             this.btnBack.Text = "ยืนยันการคืนหนังสือ";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FormOrders
             // 

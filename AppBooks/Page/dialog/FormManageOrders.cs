@@ -110,19 +110,27 @@ namespace AppBooks.Page.dialog
             if (checkNull()) {
                 if (oid != -1)
                 {
-                    order = (
-                    from o in context.Orders
-                    where o.oid == oid
-                    select o).FirstOrDefault();
+                    int temp = -1;
+                    order = (from o in context.Orders where o.oid == oid select o).FirstOrDefault();
                     if (order == null) return;
                     order.name = tbName.Text;
                     order.phone = tbPhone.Text;
+                    temp = order.bid;
                     order.bid = bid;
                     order.sdate = dtpSdate.Value;
                     order.edate = dtpOrders.Value;
                     int check = context.SaveChanges();
                     if (check == 1)
                     {
+                        if (temp != -1) 
+                        {
+                            var book = (from b in context.Books where b.bid == temp select b).FirstOrDefault();
+                            book.status = 0;
+                            context.SaveChanges();
+                        }
+                        var book1 = (from b in context.Books where b.bid == bid select b).FirstOrDefault();
+                        book1.status = 1;
+                        context.SaveChanges();
                         MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
                         Dispose();
                     }
@@ -142,6 +150,9 @@ namespace AppBooks.Page.dialog
                     int check = context.SaveChanges();
                     if (check == 1)
                     {
+                        var book1 = (from b in context.Books where b.bid == bid select b).FirstOrDefault();
+                        book1.status = 1;
+                        context.SaveChanges();
                         MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
                         Dispose();
                     }
