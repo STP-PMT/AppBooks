@@ -33,21 +33,19 @@ namespace AppBooks.Page.dialog
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpSdate = new System.Windows.Forms.DateTimePicker();
+            this.lbBookName = new System.Windows.Forms.Label();
+            this.labelBookName = new System.Windows.Forms.Label();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.dgvManageOrders = new System.Windows.Forms.DataGridView();
+            this.dtpOrders = new System.Windows.Forms.DateTimePicker();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelSdate = new System.Windows.Forms.Label();
-            this.tbName = new System.Windows.Forms.TextBox();
-            this.tbPhone = new System.Windows.Forms.TextBox();
-            this.dtpOrders = new System.Windows.Forms.DateTimePicker();
-            this.dgvManageOrders = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.tbSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.labelBookName = new System.Windows.Forms.Label();
-            this.lbBookName = new System.Windows.Forms.Label();
-            this.dtpSdate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageOrders)).BeginInit();
@@ -78,8 +76,6 @@ namespace AppBooks.Page.dialog
             this.panel2.Controls.Add(this.dtpSdate);
             this.panel2.Controls.Add(this.lbBookName);
             this.panel2.Controls.Add(this.labelBookName);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Controls.Add(this.tbSearch);
             this.panel2.Controls.Add(this.btnOk);
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.dgvManageOrders);
@@ -95,6 +91,93 @@ namespace AppBooks.Page.dialog
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(741, 359);
             this.panel2.TabIndex = 1;
+            // 
+            // dtpSdate
+            // 
+            this.dtpSdate.CustomFormat = "dd.MM.yyyy";
+            this.dtpSdate.Enabled = false;
+            this.dtpSdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSdate.Location = new System.Drawing.Point(83, 158);
+            this.dtpSdate.Name = "dtpSdate";
+            this.dtpSdate.Size = new System.Drawing.Size(151, 20);
+            this.dtpSdate.TabIndex = 26;
+            // 
+            // lbBookName
+            // 
+            this.lbBookName.Location = new System.Drawing.Point(86, 127);
+            this.lbBookName.Name = "lbBookName";
+            this.lbBookName.Size = new System.Drawing.Size(151, 20);
+            this.lbBookName.TabIndex = 25;
+            // 
+            // labelBookName
+            // 
+            this.labelBookName.AutoSize = true;
+            this.labelBookName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBookName.Location = new System.Drawing.Point(6, 124);
+            this.labelBookName.Name = "labelBookName";
+            this.labelBookName.Size = new System.Drawing.Size(73, 19);
+            this.labelBookName.TabIndex = 24;
+            this.labelBookName.Text = "ชื่อหนังสือ :";
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(553, 318);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 21;
+            this.btnOk.Text = "ตกลง";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(634, 318);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 20;
+            this.btnClose.Text = "ยกเลิก";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // dgvManageOrders
+            // 
+            this.dgvManageOrders.AllowUserToAddRows = false;
+            this.dgvManageOrders.AllowUserToDeleteRows = false;
+            this.dgvManageOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvManageOrders.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvManageOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManageOrders.Location = new System.Drawing.Point(299, 60);
+            this.dgvManageOrders.Name = "dgvManageOrders";
+            this.dgvManageOrders.ReadOnly = true;
+            this.dgvManageOrders.RowHeadersVisible = false;
+            this.dgvManageOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvManageOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvManageOrders.Size = new System.Drawing.Size(410, 236);
+            this.dgvManageOrders.TabIndex = 19;
+            this.dgvManageOrders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageOrders_CellClick);
+            // 
+            // dtpOrders
+            // 
+            this.dtpOrders.CustomFormat = "dd.MM.yyyy";
+            this.dtpOrders.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpOrders.Location = new System.Drawing.Point(83, 187);
+            this.dtpOrders.Name = "dtpOrders";
+            this.dtpOrders.Size = new System.Drawing.Size(151, 20);
+            this.dtpOrders.TabIndex = 17;
+            // 
+            // tbPhone
+            // 
+            this.tbPhone.Location = new System.Drawing.Point(86, 88);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(151, 20);
+            this.tbPhone.TabIndex = 16;
+            // 
+            // tbName
+            // 
+            this.tbName.Location = new System.Drawing.Point(86, 59);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(151, 20);
+            this.tbName.TabIndex = 15;
             // 
             // label6
             // 
@@ -136,109 +219,6 @@ namespace AppBooks.Page.dialog
             this.labelSdate.TabIndex = 11;
             this.labelSdate.Text = "วันที่ยืม :";
             // 
-            // tbName
-            // 
-            this.tbName.Location = new System.Drawing.Point(86, 59);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(151, 20);
-            this.tbName.TabIndex = 15;
-            // 
-            // tbPhone
-            // 
-            this.tbPhone.Location = new System.Drawing.Point(86, 88);
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(151, 20);
-            this.tbPhone.TabIndex = 16;
-            // 
-            // dtpOrders
-            // 
-            this.dtpOrders.CustomFormat = "dd.MM.yyyy";
-            this.dtpOrders.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOrders.Location = new System.Drawing.Point(83, 187);
-            this.dtpOrders.Name = "dtpOrders";
-            this.dtpOrders.Size = new System.Drawing.Size(151, 20);
-            this.dtpOrders.TabIndex = 17;
-            // 
-            // dgvManageOrders
-            // 
-            this.dgvManageOrders.AllowUserToAddRows = false;
-            this.dgvManageOrders.AllowUserToDeleteRows = false;
-            this.dgvManageOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvManageOrders.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvManageOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvManageOrders.Location = new System.Drawing.Point(299, 60);
-            this.dgvManageOrders.Name = "dgvManageOrders";
-            this.dgvManageOrders.ReadOnly = true;
-            this.dgvManageOrders.RowHeadersVisible = false;
-            this.dgvManageOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvManageOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvManageOrders.Size = new System.Drawing.Size(410, 236);
-            this.dgvManageOrders.TabIndex = 19;
-            this.dgvManageOrders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageOrders_CellClick);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(634, 318);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 20;
-            this.btnClose.Text = "ยกเลิก";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnOk
-            // 
-            this.btnOk.Location = new System.Drawing.Point(553, 318);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 21;
-            this.btnOk.Text = "ตกลง";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Location = new System.Drawing.Point(504, 31);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(124, 20);
-            this.tbSearch.TabIndex = 22;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(634, 31);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 23;
-            this.btnSearch.Text = "ค้นหา";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // labelBookName
-            // 
-            this.labelBookName.AutoSize = true;
-            this.labelBookName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBookName.Location = new System.Drawing.Point(6, 124);
-            this.labelBookName.Name = "labelBookName";
-            this.labelBookName.Size = new System.Drawing.Size(73, 19);
-            this.labelBookName.TabIndex = 24;
-            this.labelBookName.Text = "ชื่อหนังสือ :";
-            // 
-            // lbBookName
-            // 
-            this.lbBookName.Location = new System.Drawing.Point(86, 127);
-            this.lbBookName.Name = "lbBookName";
-            this.lbBookName.Size = new System.Drawing.Size(151, 20);
-            this.lbBookName.TabIndex = 25;
-            // 
-            // dtpSdate
-            // 
-            this.dtpSdate.CustomFormat = "dd.MM.yyyy";
-            this.dtpSdate.Enabled = false;
-            this.dtpSdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSdate.Location = new System.Drawing.Point(83, 158);
-            this.dtpSdate.Name = "dtpSdate";
-            this.dtpSdate.Size = new System.Drawing.Size(151, 20);
-            this.dtpSdate.TabIndex = 26;
-            // 
             // FormManageOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,8 +257,6 @@ namespace AppBooks.Page.dialog
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgvManageOrders;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label labelBookName;
         private System.Windows.Forms.Label lbBookName;
         private System.Windows.Forms.DateTimePicker dtpSdate;
