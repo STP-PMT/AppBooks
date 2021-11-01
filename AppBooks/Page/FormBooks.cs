@@ -115,7 +115,6 @@ namespace AppBooks
                     context.Books.Remove(del);
                     int change = context.SaveChanges();
                 }
-
             }
             bid = -1;
         }

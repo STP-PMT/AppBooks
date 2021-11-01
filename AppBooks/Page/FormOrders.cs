@@ -25,6 +25,20 @@ namespace AppBooks
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             Console.WriteLine("Date : " + monthCalendar.SelectionRange.Start.ToString());
+            var result = (
+                 from o in context.Orders
+                 join b in context.Books on o.bid equals b.bid
+                 join t in context.Types on b.type equals t.tid
+                 where o.edate == monthCalendar.SelectionRange.Start
+                 select new
+                 {
+                     รหัสรายการ = o.oid,
+                     ชื่อหนังสือ = b.name,
+                     ชื่อ = o.name,
+                     เบอร์โทร = o.phone,
+                     วันที่ต้องคืน = o.edate
+                 });
+            dgvOrdersAll.DataSource = result.ToList();
         }
 
         private void FormOrders_Load(object sender, EventArgs e)

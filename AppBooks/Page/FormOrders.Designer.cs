@@ -55,11 +55,14 @@ namespace AppBooks
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
+            this.dgvOutDate = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabAll.SuspendLayout();
+            this.tabEnd.SuspendLayout();
             this.panelDetailOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOutDate)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOrdersAll
@@ -67,8 +70,10 @@ namespace AppBooks
             this.dgvOrdersAll.AllowUserToAddRows = false;
             this.dgvOrdersAll.AllowUserToDeleteRows = false;
             this.dgvOrdersAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrdersAll.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvOrdersAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdersAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOrdersAll.GridColor = System.Drawing.SystemColors.Control;
             this.dgvOrdersAll.Location = new System.Drawing.Point(3, 3);
             this.dgvOrdersAll.Name = "dgvOrdersAll";
             this.dgvOrdersAll.ReadOnly = true;
@@ -113,11 +118,12 @@ namespace AppBooks
             // 
             // tabEnd
             // 
+            this.tabEnd.Controls.Add(this.dgvOutDate);
             this.tabEnd.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEnd.Location = new System.Drawing.Point(4, 22);
             this.tabEnd.Name = "tabEnd";
             this.tabEnd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnd.Size = new System.Drawing.Size(552, 486);
+            this.tabEnd.Size = new System.Drawing.Size(605, 486);
             this.tabEnd.TabIndex = 1;
             this.tabEnd.Text = "เลยกำหนด";
             this.tabEnd.UseVisualStyleBackColor = true;
@@ -334,6 +340,16 @@ namespace AppBooks
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
+            // dgvOutDate
+            // 
+            this.dgvOutDate.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvOutDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOutDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOutDate.Location = new System.Drawing.Point(3, 3);
+            this.dgvOutDate.Name = "dgvOutDate";
+            this.dgvOutDate.Size = new System.Drawing.Size(599, 480);
+            this.dgvOutDate.TabIndex = 1;
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,9 +371,11 @@ namespace AppBooks
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabAll.ResumeLayout(false);
+            this.tabEnd.ResumeLayout(false);
             this.panelDetailOrder.ResumeLayout(false);
             this.panelDetailOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOutDate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,5 +408,6 @@ namespace AppBooks
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnBorrow;
+        private System.Windows.Forms.DataGridView dgvOutDate;
     }
 }
