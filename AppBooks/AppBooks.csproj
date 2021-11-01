@@ -39,6 +39,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -85,12 +86,6 @@
     <Compile Include="Order.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Page\dialog\FormDeleteBooks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\dialog\FormDelete.Designer.cs">
-      <DependentUpon>FormDeleteBooks.cs</DependentUpon>
-    </Compile>
     <Compile Include="Page\dialog\FormManageBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +129,6 @@
     </Compile>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\dialog\FormDelete.resx">
-      <DependentUpon>FormDeleteBooks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\dialog\FormDeleteBooks.resx">
-      <DependentUpon>FormDeleteBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page\dialog\FormManageBooks.resx">
       <DependentUpon>FormManageBooks.cs</DependentUpon>

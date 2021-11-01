@@ -7,7 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace AppBooks
 {
@@ -80,15 +82,18 @@ namespace AppBooks
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(oid);
+        
             if (oid != -1)
             {
-                FormDeleteOrder form = new FormDeleteOrder(oid);
-                form.ShowDialog();
-                if (form.status == 1)
+                if (MessageBox.Show("ต้องการลบรายการ " + oid + " หรือไม่?", "ลบรายการ", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    FormOrders_Load(sender, e);
+                    var del = context.Orders
+                    .Where(o => o.oid == oid)
+                    .First();
+                    context.Orders.Remove(del);
+                    context.SaveChanges();
                 }
+                FormOrders_Load(sender, e);
             }
             oid = -1;
         }

@@ -107,11 +107,13 @@ namespace AppBooks
         {
             if (bid != -1)
             {
-                FormDeleteBooks form = new FormDeleteBooks(bid);
-                form.ShowDialog();
-                if (form.status == 1)
+                if (MessageBox.Show("ต้องการลบรายการ " + bid + " หรือไม่?", "ลบรายการ", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    FormBooks_Load(sender, e);
+                    var del = context.Books
+                    .Where(b => b.bid == bid)
+                    .First();
+                    context.Books.Remove(del);
+                    int change = context.SaveChanges();
                 }
 
             }
