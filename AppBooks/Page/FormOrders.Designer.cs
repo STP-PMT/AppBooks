@@ -320,6 +320,7 @@ namespace AppBooks
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "ลบ";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnBorrow
             // 

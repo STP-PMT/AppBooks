@@ -48,8 +48,7 @@ namespace AppBooks.Page.dialog
                 lbTitle.Text = "แก้ไขข้อมูล";
                 var rsOrder = (
                 from o in context.Orders
-                join b in context.Books
-                on o.bid equals b.bid
+                join b in context.Books on o.bid equals b.bid
                 where o.oid == oid
                 select new
                 {
@@ -138,7 +137,7 @@ namespace AppBooks.Page.dialog
                 order.bid = bid;
                 order.sdate = dtpSdate.Value;
                 order.edate = dtpOrders.Value;
-                context.Orders.Add(order);
+                context.Orders.Add(order);               
                 int check = context.SaveChanges();
                 if (check == 1)
                 {

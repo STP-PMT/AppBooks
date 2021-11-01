@@ -64,6 +64,7 @@ namespace AppBooks
                     FormOrders_Load(sender, e);
                 }
             }
+            oid = -1;
            
         }
 
@@ -75,6 +76,21 @@ namespace AppBooks
                 int id = int.Parse(dgvOrdersAll.Rows[e.RowIndex].Cells["รหัสรายการ"].FormattedValue.ToString());
                 oid = id;
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(oid);
+            if (oid != -1)
+            {
+                FormDeleteOrder form = new FormDeleteOrder(oid);
+                form.ShowDialog();
+                if (form.status == 1)
+                {
+                    FormOrders_Load(sender, e);
+                }
+            }
+            oid = -1;
         }
     }
 }

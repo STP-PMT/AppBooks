@@ -138,6 +138,9 @@
     <EmbeddedResource Include="Page\dialog\FormDelete.resx">
       <DependentUpon>FormDeleteBooks.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Page\dialog\FormDeleteBooks.resx">
+      <DependentUpon>FormDeleteBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Page\dialog\FormManageBooks.resx">
       <DependentUpon>FormManageBooks.cs</DependentUpon>
     </EmbeddedResource>
