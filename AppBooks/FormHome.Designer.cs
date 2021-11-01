@@ -32,7 +32,6 @@ namespace AppBooks
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@ namespace AppBooks
             // 
             this.panelMenu.BackColor = System.Drawing.Color.White;
             this.panelMenu.Controls.Add(this.labelName);
-            this.panelMenu.Controls.Add(this.btnReport);
             this.panelMenu.Controls.Add(this.btnBooks);
             this.panelMenu.Controls.Add(this.btnOrders);
             this.panelMenu.Controls.Add(this.btnHome);
@@ -72,20 +70,6 @@ namespace AppBooks
             this.labelName.Size = new System.Drawing.Size(119, 19);
             this.labelName.TabIndex = 0;
             this.labelName.Text = "สิทธิพงษ์ แปลมูลตรี";
-            // 
-            // btnReport
-            // 
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(0, 266);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(204, 45);
-            this.btnReport.TabIndex = 5;
-            this.btnReport.Text = "รายงาน";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnBooks
             // 
@@ -202,7 +186,6 @@ namespace AppBooks
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Panel panelDetail;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Button btnReport;
     }
 }
 

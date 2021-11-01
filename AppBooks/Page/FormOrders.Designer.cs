@@ -54,6 +54,7 @@ namespace AppBooks
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabAll.SuspendLayout();
@@ -75,14 +76,14 @@ namespace AppBooks
             this.dgvOrdersAll.ReadOnly = true;
             this.dgvOrdersAll.RowHeadersVisible = false;
             this.dgvOrdersAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdersAll.Size = new System.Drawing.Size(599, 480);
+            this.dgvOrdersAll.Size = new System.Drawing.Size(833, 534);
             this.dgvOrdersAll.TabIndex = 0;
             this.dgvOrdersAll.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdersAll_CellClick);
             // 
             // monthCalendar
             // 
             this.monthCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar.Location = new System.Drawing.Point(637, 18);
+            this.monthCalendar.Location = new System.Drawing.Point(871, 18);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 1;
             this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
@@ -96,7 +97,7 @@ namespace AppBooks
             this.tabControl1.Location = new System.Drawing.Point(12, 170);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(613, 512);
+            this.tabControl1.Size = new System.Drawing.Size(847, 566);
             this.tabControl1.TabIndex = 2;
             // 
             // tabAll
@@ -106,7 +107,7 @@ namespace AppBooks
             this.tabAll.Location = new System.Drawing.Point(4, 22);
             this.tabAll.Name = "tabAll";
             this.tabAll.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAll.Size = new System.Drawing.Size(605, 486);
+            this.tabAll.Size = new System.Drawing.Size(839, 540);
             this.tabAll.TabIndex = 0;
             this.tabAll.Text = "ทั้งหมด";
             this.tabAll.UseVisualStyleBackColor = true;
@@ -115,7 +116,7 @@ namespace AppBooks
             // 
             this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSearch.Location = new System.Drawing.Point(381, 38);
+            this.tbSearch.Location = new System.Drawing.Point(615, 38);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(177, 20);
             this.tbSearch.TabIndex = 3;
@@ -124,7 +125,7 @@ namespace AppBooks
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(564, 36);
+            this.btnSearch.Location = new System.Drawing.Point(798, 36);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(54, 25);
             this.btnSearch.TabIndex = 4;
@@ -136,6 +137,7 @@ namespace AppBooks
             this.panelDetailOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDetailOrder.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelDetailOrder.Controls.Add(this.btnBack);
             this.panelDetailOrder.Controls.Add(this.lbPhone);
             this.panelDetailOrder.Controls.Add(this.lbUserName);
             this.panelDetailOrder.Controls.Add(this.label6);
@@ -149,9 +151,9 @@ namespace AppBooks
             this.panelDetailOrder.Controls.Add(this.labelDetailBook);
             this.panelDetailOrder.Controls.Add(this.labelName);
             this.panelDetailOrder.Controls.Add(this.ptbOrder);
-            this.panelDetailOrder.Location = new System.Drawing.Point(637, 192);
+            this.panelDetailOrder.Location = new System.Drawing.Point(871, 192);
             this.panelDetailOrder.Name = "panelDetailOrder";
-            this.panelDetailOrder.Size = new System.Drawing.Size(227, 483);
+            this.panelDetailOrder.Size = new System.Drawing.Size(227, 537);
             this.panelDetailOrder.TabIndex = 5;
             // 
             // lbPhone
@@ -291,7 +293,7 @@ namespace AppBooks
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(462, 141);
+            this.btnEdit.Location = new System.Drawing.Point(696, 141);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 7;
@@ -303,8 +305,10 @@ namespace AppBooks
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(543, 141);
+            this.btnDelete.Location = new System.Drawing.Point(777, 141);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 8;
@@ -315,7 +319,7 @@ namespace AppBooks
             // btnBorrow
             // 
             this.btnBorrow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrow.Location = new System.Drawing.Point(381, 141);
+            this.btnBorrow.Location = new System.Drawing.Point(615, 141);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(75, 23);
             this.btnBorrow.TabIndex = 9;
@@ -323,11 +327,25 @@ namespace AppBooks
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(17, 496);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(195, 29);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "ยืนยันการคืนหนังสือ";
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 694);
+            this.ClientSize = new System.Drawing.Size(1116, 748);
             this.Controls.Add(this.btnBorrow);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -378,5 +396,6 @@ namespace AppBooks
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnBorrow;
+        private System.Windows.Forms.Button btnBack;
     }
 }
