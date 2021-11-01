@@ -12,7 +12,7 @@ namespace AppBooks
 {
     public partial class FormHome : Form
     {
-        private Color c = Color.FromArgb(100, 70, 185, 255);
+        private Color c = Color.MediumTurquoise;
         private Form temp = null;
 
         public FormHome()

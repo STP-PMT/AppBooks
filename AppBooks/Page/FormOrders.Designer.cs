@@ -31,9 +31,10 @@ namespace AppBooks
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrders));
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
-            this.tbSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lbPhone = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,11 +52,8 @@ namespace AppBooks
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.dgvOrdersAll = new System.Windows.Forms.DataGridView();
             this.btnAll = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
             this.btnOut = new System.Windows.Forms.Button();
             this.panelDetailOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).BeginInit();
@@ -70,26 +68,6 @@ namespace AppBooks
             this.monthCalendar.TabIndex = 1;
             this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
             this.monthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateSelected);
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSearch.Location = new System.Drawing.Point(615, 38);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(177, 20);
-            this.tbSearch.TabIndex = 3;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(798, 36);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(54, 25);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "ค้นหา";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // panelDetailOrder
             // 
@@ -116,6 +94,41 @@ namespace AppBooks
             this.panelDetailOrder.Name = "panelDetailOrder";
             this.panelDetailOrder.Size = new System.Drawing.Size(227, 537);
             this.panelDetailOrder.TabIndex = 5;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbPrice.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.ForeColor = System.Drawing.Color.Red;
+            this.lbPrice.Location = new System.Drawing.Point(89, 444);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(120, 19);
+            this.lbPrice.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 444);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 19);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "ค่าปรับ :";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(17, 496);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(195, 29);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "ยืนยันการคืนหนังสือ";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lbPhone
             // 
@@ -288,21 +301,6 @@ namespace AppBooks
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(17, 496);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(195, 29);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Text = "ยืนยันการคืนหนังสือ";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // dgvOrdersAll
             // 
             this.dgvOrdersAll.AllowUserToAddRows = false;
@@ -333,26 +331,6 @@ namespace AppBooks
             this.btnAll.UseVisualStyleBackColor = true;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 444);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 19);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "ค่าปรับ :";
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.BackColor = System.Drawing.Color.Gainsboro;
-            this.lbPrice.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.ForeColor = System.Drawing.Color.Red;
-            this.lbPrice.Location = new System.Drawing.Point(89, 444);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(120, 19);
-            this.lbPrice.TabIndex = 15;
-            // 
             // btnOut
             // 
             this.btnOut.Location = new System.Drawing.Point(100, 141);
@@ -367,6 +345,7 @@ namespace AppBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(1116, 748);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.btnAll);
@@ -376,8 +355,6 @@ namespace AppBooks
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.labelTitleOrders);
             this.Controls.Add(this.panelDetailOrder);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.monthCalendar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOrders";
@@ -388,14 +365,11 @@ namespace AppBooks
             ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.MonthCalendar monthCalendar;
-        private System.Windows.Forms.TextBox tbSearch;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panelDetailOrder;
         private System.Windows.Forms.Label labelTitleOrders;
         private System.Windows.Forms.PictureBox ptbOrder;

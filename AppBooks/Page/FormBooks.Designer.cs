@@ -42,8 +42,6 @@ namespace AppBooks
             this.lbType = new System.Windows.Forms.Label();
             this.labelType = new System.Windows.Forms.Label();
             this.pictureBoxBook = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.tbSearch = new System.Windows.Forms.TextBox();
             this.tabAll = new System.Windows.Forms.TabPage();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.btnAddBook = new System.Windows.Forms.Button();
@@ -60,7 +58,7 @@ namespace AppBooks
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.OrangeRed;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(846, 143);
+            this.btnDelete.Location = new System.Drawing.Point(846, 74);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 17;
@@ -71,7 +69,7 @@ namespace AppBooks
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(765, 143);
+            this.btnEdit.Location = new System.Drawing.Point(765, 74);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 16;
@@ -141,9 +139,9 @@ namespace AppBooks
             this.panelDetailOrder.Controls.Add(this.labelDetailBook);
             this.panelDetailOrder.Controls.Add(this.labelName);
             this.panelDetailOrder.Controls.Add(this.pictureBoxBook);
-            this.panelDetailOrder.Location = new System.Drawing.Point(694, 189);
+            this.panelDetailOrder.Location = new System.Drawing.Point(694, 123);
             this.panelDetailOrder.Name = "panelDetailOrder";
-            this.panelDetailOrder.Size = new System.Drawing.Size(227, 454);
+            this.panelDetailOrder.Size = new System.Drawing.Size(227, 527);
             this.panelDetailOrder.TabIndex = 14;
             // 
             // lbStatus
@@ -195,26 +193,6 @@ namespace AppBooks
             this.pictureBoxBook.TabIndex = 0;
             this.pictureBoxBook.TabStop = false;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(867, 37);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(54, 25);
-            this.btnSearch.TabIndex = 13;
-            this.btnSearch.Text = "ค้นหา";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSearch.Location = new System.Drawing.Point(684, 39);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(177, 20);
-            this.tbSearch.TabIndex = 12;
-            // 
             // tabAll
             // 
             this.tabAll.Controls.Add(this.dgvBooks);
@@ -222,7 +200,7 @@ namespace AppBooks
             this.tabAll.Location = new System.Drawing.Point(4, 22);
             this.tabAll.Name = "tabAll";
             this.tabAll.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAll.Size = new System.Drawing.Size(667, 460);
+            this.tabAll.Size = new System.Drawing.Size(667, 523);
             this.tabAll.TabIndex = 0;
             this.tabAll.Text = "ทั้งหมด";
             this.tabAll.UseVisualStyleBackColor = true;
@@ -243,14 +221,14 @@ namespace AppBooks
             this.dgvBooks.RowHeadersVisible = false;
             this.dgvBooks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBooks.Size = new System.Drawing.Size(661, 454);
+            this.dgvBooks.Size = new System.Drawing.Size(661, 517);
             this.dgvBooks.TabIndex = 0;
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             // 
             // btnAddBook
             // 
             this.btnAddBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddBook.Location = new System.Drawing.Point(684, 143);
+            this.btnAddBook.Location = new System.Drawing.Point(684, 74);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(75, 23);
             this.btnAddBook.TabIndex = 18;
@@ -264,23 +242,22 @@ namespace AppBooks
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabAll);
-            this.tabControl1.Location = new System.Drawing.Point(12, 164);
+            this.tabControl1.Location = new System.Drawing.Point(12, 101);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(675, 486);
+            this.tabControl1.Size = new System.Drawing.Size(675, 549);
             this.tabControl1.TabIndex = 11;
             // 
             // FormBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(933, 662);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.labelTitleOrders);
             this.Controls.Add(this.panelDetailOrder);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormBooks";
@@ -293,7 +270,6 @@ namespace AppBooks
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -307,8 +283,6 @@ namespace AppBooks
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBoxBook;
         private System.Windows.Forms.Panel panelDetailOrder;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.TabPage tabAll;
         private System.Windows.Forms.DataGridView dgvBooks;
         private System.Windows.Forms.Button btnAddBook;
