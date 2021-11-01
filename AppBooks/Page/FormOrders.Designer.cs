@@ -54,6 +54,9 @@ namespace AppBooks
             this.btnBack = new System.Windows.Forms.Button();
             this.dgvOrdersAll = new System.Windows.Forms.DataGridView();
             this.btnAll = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.btnOut = new System.Windows.Forms.Button();
             this.panelDetailOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).BeginInit();
@@ -93,6 +96,8 @@ namespace AppBooks
             this.panelDetailOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDetailOrder.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelDetailOrder.Controls.Add(this.lbPrice);
+            this.panelDetailOrder.Controls.Add(this.label1);
             this.panelDetailOrder.Controls.Add(this.btnBack);
             this.panelDetailOrder.Controls.Add(this.lbPhone);
             this.panelDetailOrder.Controls.Add(this.lbUserName);
@@ -328,11 +333,42 @@ namespace AppBooks
             this.btnAll.UseVisualStyleBackColor = true;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 444);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 19);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "ค่าปรับ :";
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbPrice.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.ForeColor = System.Drawing.Color.Red;
+            this.lbPrice.Location = new System.Drawing.Point(89, 444);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(120, 19);
+            this.lbPrice.TabIndex = 15;
+            // 
+            // btnOut
+            // 
+            this.btnOut.Location = new System.Drawing.Point(100, 141);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(75, 23);
+            this.btnOut.TabIndex = 11;
+            this.btnOut.Text = "เลยกำหนด";
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 748);
+            this.Controls.Add(this.btnOut);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.dgvOrdersAll);
             this.Controls.Add(this.btnBorrow);
@@ -381,5 +417,8 @@ namespace AppBooks
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dgvOrdersAll;
         private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Button btnOut;
     }
 }
