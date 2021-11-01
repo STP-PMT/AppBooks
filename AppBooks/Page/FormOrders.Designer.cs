@@ -76,6 +76,7 @@ namespace AppBooks
             this.dgvOrdersAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdersAll.Size = new System.Drawing.Size(546, 480);
             this.dgvOrdersAll.TabIndex = 0;
+            this.dgvOrdersAll.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdersAll_CellClick);
             // 
             // monthCalendar
             // 
@@ -306,6 +307,7 @@ namespace AppBooks
             this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "แก้ไข";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 

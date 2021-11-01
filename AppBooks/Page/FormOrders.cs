@@ -14,6 +14,7 @@ namespace AppBooks
     public partial class FormOrders : Form
     {
         dbBookEntities context = new dbBookEntities();
+        int oid = -1;
         public FormOrders()
         {
             InitializeComponent();
@@ -49,6 +50,30 @@ namespace AppBooks
             if (form.status == 1)
             {
                 FormOrders_Load(sender, e);
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if(oid != -1)
+            {
+                FormManageOrders form = new FormManageOrders(oid);
+                form.ShowDialog();
+                if (form.status == 1)
+                {
+                    FormOrders_Load(sender, e);
+                }
+            }
+           
+        }
+
+        private void dgvOrdersAll_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1 && dgvOrdersAll.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dgvOrdersAll.CurrentRow.Selected = true;
+                int id = int.Parse(dgvOrdersAll.Rows[e.RowIndex].Cells["รหัสรายการ"].FormattedValue.ToString());
+                oid = id;
             }
         }
     }
