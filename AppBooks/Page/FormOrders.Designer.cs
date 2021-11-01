@@ -50,7 +50,7 @@ namespace AppBooks
             this.lbName = new System.Windows.Forms.Label();
             this.labelDetailBook = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbOrder = new System.Windows.Forms.PictureBox();
             this.labelTitleOrders = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@ namespace AppBooks
             this.tabControl1.SuspendLayout();
             this.tabAll.SuspendLayout();
             this.panelDetailOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOrdersAll
@@ -74,14 +74,14 @@ namespace AppBooks
             this.dgvOrdersAll.ReadOnly = true;
             this.dgvOrdersAll.RowHeadersVisible = false;
             this.dgvOrdersAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdersAll.Size = new System.Drawing.Size(546, 480);
+            this.dgvOrdersAll.Size = new System.Drawing.Size(599, 480);
             this.dgvOrdersAll.TabIndex = 0;
             this.dgvOrdersAll.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdersAll_CellClick);
             // 
             // monthCalendar
             // 
             this.monthCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar.Location = new System.Drawing.Point(584, 18);
+            this.monthCalendar.Location = new System.Drawing.Point(637, 18);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 1;
             this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
@@ -96,7 +96,7 @@ namespace AppBooks
             this.tabControl1.Location = new System.Drawing.Point(12, 170);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(560, 512);
+            this.tabControl1.Size = new System.Drawing.Size(613, 512);
             this.tabControl1.TabIndex = 2;
             // 
             // tabAll
@@ -106,7 +106,7 @@ namespace AppBooks
             this.tabAll.Location = new System.Drawing.Point(4, 22);
             this.tabAll.Name = "tabAll";
             this.tabAll.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAll.Size = new System.Drawing.Size(552, 486);
+            this.tabAll.Size = new System.Drawing.Size(605, 486);
             this.tabAll.TabIndex = 0;
             this.tabAll.Text = "ทั้งหมด";
             this.tabAll.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@ namespace AppBooks
             // 
             this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSearch.Location = new System.Drawing.Point(328, 38);
+            this.tbSearch.Location = new System.Drawing.Point(381, 38);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(177, 20);
             this.tbSearch.TabIndex = 3;
@@ -135,7 +135,7 @@ namespace AppBooks
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(511, 36);
+            this.btnSearch.Location = new System.Drawing.Point(564, 36);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(54, 25);
             this.btnSearch.TabIndex = 4;
@@ -159,15 +159,15 @@ namespace AppBooks
             this.panelDetailOrder.Controls.Add(this.lbName);
             this.panelDetailOrder.Controls.Add(this.labelDetailBook);
             this.panelDetailOrder.Controls.Add(this.labelName);
-            this.panelDetailOrder.Controls.Add(this.pictureBox1);
-            this.panelDetailOrder.Location = new System.Drawing.Point(584, 192);
+            this.panelDetailOrder.Controls.Add(this.ptbOrder);
+            this.panelDetailOrder.Location = new System.Drawing.Point(637, 192);
             this.panelDetailOrder.Name = "panelDetailOrder";
             this.panelDetailOrder.Size = new System.Drawing.Size(227, 483);
             this.panelDetailOrder.TabIndex = 5;
             // 
             // lbPhone
             // 
-            this.lbPhone.BackColor = System.Drawing.Color.White;
+            this.lbPhone.BackColor = System.Drawing.Color.Gainsboro;
             this.lbPhone.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.Location = new System.Drawing.Point(92, 412);
             this.lbPhone.Name = "lbPhone";
@@ -176,7 +176,7 @@ namespace AppBooks
             // 
             // lbUserName
             // 
-            this.lbUserName.BackColor = System.Drawing.Color.White;
+            this.lbUserName.BackColor = System.Drawing.Color.Gainsboro;
             this.lbUserName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserName.Location = new System.Drawing.Point(92, 384);
             this.lbUserName.Name = "lbUserName";
@@ -205,7 +205,7 @@ namespace AppBooks
             // 
             // lbEdate
             // 
-            this.lbEdate.BackColor = System.Drawing.Color.White;
+            this.lbEdate.BackColor = System.Drawing.Color.Gainsboro;
             this.lbEdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEdate.Location = new System.Drawing.Point(92, 349);
             this.lbEdate.Name = "lbEdate";
@@ -214,7 +214,7 @@ namespace AppBooks
             // 
             // lbSdate
             // 
-            this.lbSdate.BackColor = System.Drawing.Color.White;
+            this.lbSdate.BackColor = System.Drawing.Color.Gainsboro;
             this.lbSdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSdate.Location = new System.Drawing.Point(92, 321);
             this.lbSdate.Name = "lbSdate";
@@ -243,7 +243,7 @@ namespace AppBooks
             // 
             // lbDetail
             // 
-            this.lbDetail.BackColor = System.Drawing.Color.White;
+            this.lbDetail.BackColor = System.Drawing.Color.Gainsboro;
             this.lbDetail.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDetail.Location = new System.Drawing.Point(92, 254);
             this.lbDetail.Name = "lbDetail";
@@ -252,7 +252,7 @@ namespace AppBooks
             // 
             // lbName
             // 
-            this.lbName.BackColor = System.Drawing.Color.White;
+            this.lbName.BackColor = System.Drawing.Color.Gainsboro;
             this.lbName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(92, 225);
             this.lbName.Name = "lbName";
@@ -279,14 +279,15 @@ namespace AppBooks
             this.labelName.TabIndex = 1;
             this.labelName.Text = "ชื่อหนังสือ :";
             // 
-            // pictureBox1
+            // ptbOrder
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptbOrder.BackColor = System.Drawing.Color.White;
+            this.ptbOrder.Location = new System.Drawing.Point(12, 13);
+            this.ptbOrder.Name = "ptbOrder";
+            this.ptbOrder.Size = new System.Drawing.Size(200, 200);
+            this.ptbOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbOrder.TabIndex = 0;
+            this.ptbOrder.TabStop = false;
             // 
             // labelTitleOrders
             // 
@@ -301,7 +302,7 @@ namespace AppBooks
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(409, 141);
+            this.btnEdit.Location = new System.Drawing.Point(462, 141);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 7;
@@ -314,7 +315,7 @@ namespace AppBooks
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.OrangeRed;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(490, 141);
+            this.btnDelete.Location = new System.Drawing.Point(543, 141);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 8;
@@ -325,7 +326,7 @@ namespace AppBooks
             // btnBorrow
             // 
             this.btnBorrow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrow.Location = new System.Drawing.Point(328, 141);
+            this.btnBorrow.Location = new System.Drawing.Point(381, 141);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(75, 23);
             this.btnBorrow.TabIndex = 9;
@@ -337,7 +338,7 @@ namespace AppBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 694);
+            this.ClientSize = new System.Drawing.Size(882, 694);
             this.Controls.Add(this.btnBorrow);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -356,7 +357,7 @@ namespace AppBooks
             this.tabAll.ResumeLayout(false);
             this.panelDetailOrder.ResumeLayout(false);
             this.panelDetailOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,7 +374,7 @@ namespace AppBooks
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panelDetailOrder;
         private System.Windows.Forms.Label labelTitleOrders;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbOrder;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelDetailBook;
         private System.Windows.Forms.Label lbName;

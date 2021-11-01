@@ -77,6 +77,32 @@ namespace AppBooks
                 dgvOrdersAll.CurrentRow.Selected = true;
                 int id = int.Parse(dgvOrdersAll.Rows[e.RowIndex].Cells["รหัสรายการ"].FormattedValue.ToString());
                 oid = id;
+                var result = (
+                 from o in context.Orders
+                 join b in context.Books on o.bid equals b.bid
+                 join t in context.Types on b.type equals t.tid
+                 where o.oid == id
+                 select new
+                 {
+
+                     NameBook = b.name,
+                     Detail = b.detail,
+                     Sdate = o.sdate,
+                     Edate = o.edate,
+                     Username = o.name,
+                     Phone = o.phone,
+                     Image = b.image
+                 }).FirstOrDefault();
+                lbName.Text = result.NameBook;
+                lbDetail.Text = result.Detail;
+                lbSdate.Text = result.Sdate.ToString("dd MMM yyyy");
+                lbEdate.Text = result.Edate.ToString("dd MMM yyyy");
+                lbUserName.Text = result.Username;
+                lbPhone.Text = result.Phone;
+                if (result.Image != null)
+                {
+                    ptbOrder.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.Image);
+                }
             }
         }
 
