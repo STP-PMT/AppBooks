@@ -41,14 +41,16 @@ namespace AppBooks.Page.dialog
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dtpOrders = new System.Windows.Forms.DateTimePicker();
             this.lbDate = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvManageOrders = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.labelBookName = new System.Windows.Forms.Label();
+            this.lbBookName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManageOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,11 +74,13 @@ namespace AppBooks.Page.dialog
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lbBookName);
+            this.panel2.Controls.Add(this.labelBookName);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.btnOk);
             this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvManageOrders);
             this.panel2.Controls.Add(this.lbDate);
             this.panel2.Controls.Add(this.dtpOrders);
             this.panel2.Controls.Add(this.textBox2);
@@ -115,7 +119,7 @@ namespace AppBooks.Page.dialog
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 147);
+            this.label2.Location = new System.Drawing.Point(6, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 12;
@@ -125,7 +129,7 @@ namespace AppBooks.Page.dialog
             // 
             this.labelSdate.AutoSize = true;
             this.labelSdate.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSdate.Location = new System.Drawing.Point(24, 118);
+            this.labelSdate.Location = new System.Drawing.Point(21, 158);
             this.labelSdate.Name = "labelSdate";
             this.labelSdate.Size = new System.Drawing.Size(56, 19);
             this.labelSdate.TabIndex = 11;
@@ -149,25 +153,34 @@ namespace AppBooks.Page.dialog
             // 
             this.dtpOrders.CustomFormat = "dd.MM.yyyy";
             this.dtpOrders.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOrders.Location = new System.Drawing.Point(86, 147);
+            this.dtpOrders.Location = new System.Drawing.Point(83, 187);
             this.dtpOrders.Name = "dtpOrders";
             this.dtpOrders.Size = new System.Drawing.Size(151, 20);
             this.dtpOrders.TabIndex = 17;
             // 
             // lbDate
             // 
-            this.lbDate.Location = new System.Drawing.Point(86, 117);
+            this.lbDate.Location = new System.Drawing.Point(83, 157);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(151, 20);
             this.lbDate.TabIndex = 18;
             // 
-            // dataGridView1
+            // dgvManageOrders
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(299, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(410, 236);
-            this.dataGridView1.TabIndex = 19;
+            this.dgvManageOrders.AllowUserToAddRows = false;
+            this.dgvManageOrders.AllowUserToDeleteRows = false;
+            this.dgvManageOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvManageOrders.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvManageOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManageOrders.Location = new System.Drawing.Point(299, 60);
+            this.dgvManageOrders.Name = "dgvManageOrders";
+            this.dgvManageOrders.ReadOnly = true;
+            this.dgvManageOrders.RowHeadersVisible = false;
+            this.dgvManageOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvManageOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvManageOrders.Size = new System.Drawing.Size(410, 236);
+            this.dgvManageOrders.TabIndex = 19;
+            this.dgvManageOrders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageOrders_CellClick);
             // 
             // btnClose
             // 
@@ -204,6 +217,23 @@ namespace AppBooks.Page.dialog
             this.btnSearch.Text = "ค้นหา";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
+            // labelBookName
+            // 
+            this.labelBookName.AutoSize = true;
+            this.labelBookName.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBookName.Location = new System.Drawing.Point(6, 124);
+            this.labelBookName.Name = "labelBookName";
+            this.labelBookName.Size = new System.Drawing.Size(73, 19);
+            this.labelBookName.TabIndex = 24;
+            this.labelBookName.Text = "ชื่อหนังสือ :";
+            // 
+            // lbBookName
+            // 
+            this.lbBookName.Location = new System.Drawing.Point(86, 127);
+            this.lbBookName.Name = "lbBookName";
+            this.lbBookName.Size = new System.Drawing.Size(151, 20);
+            this.lbBookName.TabIndex = 25;
+            // 
             // FormManageOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,7 +252,7 @@ namespace AppBooks.Page.dialog
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManageOrders)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,8 +272,10 @@ namespace AppBooks.Page.dialog
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvManageOrders;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label labelBookName;
+        private System.Windows.Forms.Label lbBookName;
     }
 }

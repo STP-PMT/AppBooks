@@ -71,6 +71,7 @@ namespace AppBooks
                 lbDetail.Text = result.detail;
                 lbType.Text = result.type;
                 lbStatus.Text = (result.status == 0) ? "มีอยู่" : "ถูกยืม";
+               
                 if (result.image != null) 
                 {
                    pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);

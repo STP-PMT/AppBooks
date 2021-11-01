@@ -264,6 +264,7 @@ namespace AppBooks
             // 
             this.lbStatus.BackColor = System.Drawing.Color.Gainsboro;
             this.lbStatus.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatus.ForeColor = System.Drawing.Color.Green;
             this.lbStatus.Location = new System.Drawing.Point(92, 364);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(120, 19);

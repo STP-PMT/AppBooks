@@ -73,6 +73,7 @@ namespace AppBooks
             this.dgvOrdersAll.Name = "dgvOrdersAll";
             this.dgvOrdersAll.ReadOnly = true;
             this.dgvOrdersAll.RowHeadersVisible = false;
+            this.dgvOrdersAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdersAll.Size = new System.Drawing.Size(546, 480);
             this.dgvOrdersAll.TabIndex = 0;
             // 
