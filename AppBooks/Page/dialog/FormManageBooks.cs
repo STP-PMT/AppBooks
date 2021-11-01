@@ -30,7 +30,7 @@ namespace AppBooks.Page.dialog
             InitializeComponent();
 
         }
-     
+
 
         public byte[] ImageToByteArray(Image image)
         {
@@ -60,7 +60,7 @@ namespace AppBooks.Page.dialog
                 bookType.Add(t.name, t.tid);
                 cbbBook.Items.Add(t.name);
             }
-            if(bid != -1)
+            if (bid != -1)
             {
                 lbTitle.Text = "แก้ไขข้อมูล";
                 var result = (
@@ -75,20 +75,20 @@ namespace AppBooks.Page.dialog
                     type = t.name,
                     b.image
                 }).FirstOrDefault();
-                    tbNameBook.Text = result.name.Trim();
-                    tbDetail.Text = result.detail.Trim();
-                    cbbBook.Text = result.type.Trim();
-                    if (result.image != null)
-                    {
-                        pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
-                    }
+                tbNameBook.Text = result.name.Trim();
+                tbDetail.Text = result.detail.Trim();
+                cbbBook.Text = result.type.Trim();
+                if (result.image != null)
+                {
+                    pictureBoxBook.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.image);
+                }
             }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             Book book = new Book();
-            if(checkNull())
+            if (checkNull())
             {
                 if (bid != -1)
                 {

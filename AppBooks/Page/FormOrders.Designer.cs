@@ -30,10 +30,7 @@ namespace AppBooks
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrders));
-            this.dgvOrdersAll = new System.Windows.Forms.DataGridView();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabAll = new System.Windows.Forms.TabPage();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
@@ -55,30 +52,12 @@ namespace AppBooks
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabAll.SuspendLayout();
+            this.dgvOrdersAll = new System.Windows.Forms.DataGridView();
+            this.btnAll = new System.Windows.Forms.Button();
             this.panelDetailOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvOrdersAll
-            // 
-            this.dgvOrdersAll.AllowUserToAddRows = false;
-            this.dgvOrdersAll.AllowUserToDeleteRows = false;
-            this.dgvOrdersAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvOrdersAll.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvOrdersAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrdersAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvOrdersAll.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvOrdersAll.Location = new System.Drawing.Point(3, 3);
-            this.dgvOrdersAll.Name = "dgvOrdersAll";
-            this.dgvOrdersAll.ReadOnly = true;
-            this.dgvOrdersAll.RowHeadersVisible = false;
-            this.dgvOrdersAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdersAll.Size = new System.Drawing.Size(833, 534);
-            this.dgvOrdersAll.TabIndex = 0;
-            this.dgvOrdersAll.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdersAll_CellClick);
             // 
             // monthCalendar
             // 
@@ -87,30 +66,7 @@ namespace AppBooks
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 1;
             this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabAll);
-            this.tabControl1.Location = new System.Drawing.Point(12, 170);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(847, 566);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabAll
-            // 
-            this.tabAll.Controls.Add(this.dgvOrdersAll);
-            this.tabAll.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAll.Location = new System.Drawing.Point(4, 22);
-            this.tabAll.Name = "tabAll";
-            this.tabAll.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAll.Size = new System.Drawing.Size(839, 540);
-            this.tabAll.TabIndex = 0;
-            this.tabAll.Text = "ทั้งหมด";
-            this.tabAll.UseVisualStyleBackColor = true;
+            this.monthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateSelected);
             // 
             // tbSearch
             // 
@@ -342,11 +298,43 @@ namespace AppBooks
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // dgvOrdersAll
+            // 
+            this.dgvOrdersAll.AllowUserToAddRows = false;
+            this.dgvOrdersAll.AllowUserToDeleteRows = false;
+            this.dgvOrdersAll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOrdersAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrdersAll.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvOrdersAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdersAll.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvOrdersAll.Location = new System.Drawing.Point(19, 192);
+            this.dgvOrdersAll.Name = "dgvOrdersAll";
+            this.dgvOrdersAll.ReadOnly = true;
+            this.dgvOrdersAll.RowHeadersVisible = false;
+            this.dgvOrdersAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrdersAll.Size = new System.Drawing.Size(833, 537);
+            this.dgvOrdersAll.TabIndex = 0;
+            this.dgvOrdersAll.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdersAll_CellClick);
+            // 
+            // btnAll
+            // 
+            this.btnAll.Location = new System.Drawing.Point(19, 141);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(75, 23);
+            this.btnAll.TabIndex = 10;
+            this.btnAll.Text = "ทั้งหมด";
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 748);
+            this.Controls.Add(this.btnAll);
+            this.Controls.Add(this.dgvOrdersAll);
             this.Controls.Add(this.btnBorrow);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -354,29 +342,22 @@ namespace AppBooks
             this.Controls.Add(this.panelDetailOrder);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.monthCalendar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOrders";
             this.Text = "FormOrders";
             this.Load += new System.EventHandler(this.FormOrders_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabAll.ResumeLayout(false);
             this.panelDetailOrder.ResumeLayout(false);
             this.panelDetailOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdersAll)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvOrdersAll;
         private System.Windows.Forms.MonthCalendar monthCalendar;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabAll;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panelDetailOrder;
@@ -398,5 +379,7 @@ namespace AppBooks
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnBorrow;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridView dgvOrdersAll;
+        private System.Windows.Forms.Button btnAll;
     }
 }

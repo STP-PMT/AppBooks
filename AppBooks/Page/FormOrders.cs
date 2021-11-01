@@ -29,7 +29,7 @@ namespace AppBooks
                  from o in context.Orders
                  join b in context.Books on o.bid equals b.bid
                  join t in context.Types on b.type equals t.tid
-                 where o.edate == monthCalendar.SelectionRange.Start
+                 where o.edate == monthCalendar.SelectionRange.Start && b.status == 1
                  select new
                  {
                      รหัสรายการ = o.oid,
@@ -48,6 +48,7 @@ namespace AppBooks
                  from o in context.Orders
                  join b in context.Books on o.bid equals b.bid
                  join t in context.Types on b.type equals t.tid
+                 where b.status ==1  && o.edate == monthCalendar.SelectionRange.Start 
                  select new
                  {
                      รหัสรายการ = o.oid,
@@ -140,7 +141,54 @@ namespace AppBooks
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            if (oid != -1) {
+                if (MessageBox.Show("ยืนยันการคืนหนังสือ" + oid + " หรือไม่?", "ยืนยันการคืนหนังสือ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    var order = (from o in context.Orders
+                                 join b in context.Books on o.bid equals b.bid
+                                 join t in context.Types on b.type equals t.tid
+                                 where o.oid == oid
+                                 select b).FirstOrDefault();
+                    order.status = 0;
+                    context.SaveChanges();
+                }
+            }
+            FormOrders_Load(sender, e);
+        }
 
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            var result = (from o in context.Orders
+                 join b in context.Books on o.bid equals b.bid
+                 join t in context.Types on b.type equals t.tid
+                 where b.status == 1 
+                 select new
+                 {
+                     รหัสรายการ = o.oid,
+                     ชื่อหนังสือ = b.name,
+                     ชื่อ = o.name,
+                     เบอร์โทร = o.phone,
+                     วันที่ต้องคืน = o.edate
+                 });
+            dgvOrdersAll.DataSource = result.ToList();
+        }
+
+        private void monthCalendar_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            var result = (
+                from o in context.Orders
+                join b in context.Books on o.bid equals b.bid
+                join t in context.Types on b.type equals t.tid
+                where o.edate == monthCalendar.SelectionRange.Start && b.status == 1
+                select new
+                {
+                    รหัสรายการ = o.oid,
+                    ชื่อหนังสือ = b.name,
+                    ชื่อ = o.name,
+                    เบอร์โทร = o.phone,
+                    วันที่ต้องคืน = o.edate
+                });
+            dgvOrdersAll.DataSource = result.ToList();
         }
     }
 }
