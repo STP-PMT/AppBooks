@@ -107,53 +107,74 @@ namespace AppBooks.Page.dialog
         private void btnOk_Click(object sender, EventArgs e)
         {
             Order order = new Order();
-            if (oid != -1)
-            {
-                order = (
-                from o in context.Orders
-                where o.oid == oid
-                select o).FirstOrDefault();
-                if (order == null) return;
-                order.name = tbName.Text;
-                order.phone = tbPhone.Text;
-                order.bid = bid;
-                order.sdate = dtpSdate.Value;
-                order.edate = dtpOrders.Value;
-                int check = context.SaveChanges();
-                if (check == 1)
+            if (checkNull()) {
+                if (oid != -1)
                 {
-                    MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
-                    Dispose();
+                    order = (
+                    from o in context.Orders
+                    where o.oid == oid
+                    select o).FirstOrDefault();
+                    if (order == null) return;
+                    order.name = tbName.Text;
+                    order.phone = tbPhone.Text;
+                    order.bid = bid;
+                    order.sdate = dtpSdate.Value;
+                    order.edate = dtpOrders.Value;
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        MessageBox.Show("แก้ไขข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("แก้ไขข้อมูลไม่สำเร็จ");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("แก้ไขข้อมูลไม่สำเร็จ");
+                    order.name = tbName.Text;
+                    order.phone = tbPhone.Text;
+                    order.bid = bid;
+                    order.sdate = dtpSdate.Value;
+                    order.edate = dtpOrders.Value;
+                    context.Orders.Add(order);
+                    int check = context.SaveChanges();
+                    if (check == 1)
+                    {
+                        MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
+                        Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
+                    }
                 }
-            }
-            else
-            {
-                order.name = tbName.Text;
-                order.phone = tbPhone.Text;
-                order.bid = bid;
-                order.sdate = dtpSdate.Value;
-                order.edate = dtpOrders.Value;
-                context.Orders.Add(order);               
-                int check = context.SaveChanges();
-                if (check == 1)
-                {
-                    MessageBox.Show("เพิ่มข้อมูลสำเร็จ");
-                    Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("เพิ่มข้อมูลไม่สำเร็จ");
-                }
+            
             }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private bool checkNull() {
+            if (tbName.Text == "" || int.TryParse(tbName.Text, out int value )) {
+                MessageBox.Show("ข้อมูลชื่อไม่ถูกต้อง");
+                return false;
+            }
+            if (!int.TryParse(tbPhone.Text, out int phone)||tbPhone.Text.Length != 10)
+            {
+                MessageBox.Show("เบอร์โทรไม่ถูกต้อง");
+                return false;
+            }
+            if (bid == -1)
+            {
+                MessageBox.Show("โปรดเลือกหนังสือ");
+                return false;
+            }
+            return true;
         }
     }
 }
