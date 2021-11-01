@@ -79,8 +79,8 @@ namespace AppBooks
                      Edate = o.edate,
                      Username = o.name,
                      Phone = o.phone,
-                     Image = b.image
-                     
+                     Image = b.image,
+
                  }).FirstOrDefault();
                 lbName.Text = result.NameBook;
                 lbDetail.Text = result.Detail;
@@ -92,7 +92,8 @@ namespace AppBooks
                 {
                     ptbOrder.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.Image);
                 }
-                //lbPrice.Text = 
+                int num = (DateTime.Now - result.Edate).Days;
+                lbPrice.Text = (num * 5).ToString();
             }
         }
 

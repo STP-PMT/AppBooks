@@ -31,6 +31,7 @@
           <ScalarProperty Name="bid" ColumnName="bid" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="price" ColumnName="price" />
           <ScalarProperty Name="sdate" ColumnName="sdate" />
           <ScalarProperty Name="edate" ColumnName="edate" />
         </MappingFragment>
