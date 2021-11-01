@@ -160,11 +160,21 @@ namespace AppBooks.Page.dialog
         }
 
         private bool checkNull() {
-            if (tbName.Text == "" || int.TryParse(tbName.Text, out int value )) {
-                MessageBox.Show("ข้อมูลชื่อไม่ถูกต้อง");
+            if (tbName.Text.Equals("")) {
+                MessageBox.Show("ใส่ข้อมูลชื่อ");
                 return false;
             }
-            if (!int.TryParse(tbPhone.Text, out int phone)||tbPhone.Text.Length != 10)
+            if (int.TryParse(tbName.Text, out int value))
+            {
+                MessageBox.Show("ข้อมูลชื่อห้ามมีตัวเลข");
+                return false;
+            }
+            if (tbPhone.Text.Length != 10)
+            {
+                MessageBox.Show("เบอร์โทรต้องมี 10 ตัว");
+                return false;
+            }
+            if (!int.TryParse(tbPhone.Text, out int phone))
             {
                 MessageBox.Show("เบอร์โทรไม่ถูกต้อง");
                 return false;
