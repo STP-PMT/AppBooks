@@ -76,7 +76,13 @@ namespace AppBooks
                     ptbOrder.Image = (Bitmap)(new ImageConverter()).ConvertFrom(result.Image);
                 }
                 int num = (DateTime.Now - result.Edate).Days;
-                lbPrice.Text = (num * 5).ToString();
+                if (num > 0)
+                {
+                    lbPrice.Text = (num * 5).ToString();
+                }
+                else {
+                    lbPrice.Text = "0";
+                }
             }
         }
     }
